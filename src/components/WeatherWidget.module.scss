@@ -2,20 +2,27 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
+  border: 1px solid rgba(56, 189, 248, 0.2);
   padding: 6px 12px;
   border-radius: 20px;
   color: var(--text-main);
   font-size: 0.9rem;
   font-weight: 500;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   height: 40px;
 
+  :global([data-theme='light']) & {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(241, 245, 249, 0.95));
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
+  }
+
   &:hover {
-    box-shadow: var(--shadow-md);
-    border-color: var(--primary);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+    border-color: rgba(56, 189, 248, 0.6);
+    transform: translateY(-2px);
   }
 }
 
@@ -31,16 +38,21 @@
 }
 
 .iconSun {
-  color: #f59e0b; /* Amber */
+  color: #fbbf24; /* Amber/Yellow */
   animation: pulse 3s infinite;
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.6));
 }
 
 .iconCloud {
   color: #94a3b8;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px rgba(148, 163, 184, 0.5));
 }
 
 .iconRain {
-  color: #3b82f6; /* Blue */
+  color: #38bdf8; /* Blue */
+  animation: bounce 2s infinite;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.6));
 }
 
 .info {
@@ -60,10 +72,15 @@
   align-items: center;
   gap: 8px;
   color: var(--text-muted);
+
+  :global([data-theme='light']) & {
+    color: #475569;
+  }
 }
 
 .windIcon {
-  color: #64748b;
+  color: #38bdf8;
+  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.4));
 }
 
 .slowSpin {
@@ -106,9 +123,27 @@
 
 @keyframes pulse {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(15deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
   }
 }
