@@ -36,7 +36,7 @@ export default function Hero() {
           playsInline 
           className={styles.videoBackground}
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src="/SKUTERY-GIZYCKO/videos/hero.mp4" type="video/mp4" />
         </video>
       </div>
       <div className={styles.overlay}></div>

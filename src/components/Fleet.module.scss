@@ -118,3 +118,10 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 1024px) {
+  .action {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
