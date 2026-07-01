@@ -51,20 +51,22 @@ export default function Fleet() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className={styles.imageWrapper}>
-                <img src={fleetImages[item.key]} alt={t(`items.${item.key}.name`)} />
-              </div>
-              <div className={styles.overlay}></div>
-              
-              <div className={styles.info}>
-                <h3>{t(`items.${item.key}.name`)}</h3>
-                <p>{t(`items.${item.key}.type`)}</p>
-                <div className={styles.action}>
-                  <Link href={`/scooter/${item.key}`} className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
-                    {t('details')} <ArrowRight size={16} style={{ marginLeft: '8px' }}/>
-                  </Link>
+              <Link href={`/scooter/${item.key}`} className={styles.cardLink}>
+                <div className={styles.imageWrapper}>
+                  <img src={fleetImages[item.key]} alt={t(`items.${item.key}.name`)} />
                 </div>
-              </div>
+                <div className={styles.overlay}></div>
+                
+                <div className={styles.info}>
+                  <h3>{t(`items.${item.key}.name`)}</h3>
+                  <p>{t(`items.${item.key}.type`)}</p>
+                  <div className={styles.action}>
+                    <span className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center' }}>
+                      {t('details')} <ArrowRight size={16} style={{ marginLeft: '8px' }}/>
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>

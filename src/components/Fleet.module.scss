@@ -41,6 +41,14 @@
 .span4col { grid-column: span 4; }
 .span2row { grid-row: span 2; }
 
+.cardLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (max-width: 1024px) {
   .bentoGrid {
     grid-template-columns: repeat(2, 1fr);
