@@ -1,5 +1,4 @@
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { scootersData } from '@/data/scooters';
 import styles from './page.module.scss';
@@ -23,13 +22,15 @@ export function generateStaticParams() {
   return Object.keys(scootersData).map((slug) => ({ slug }));
 }
 
-export default function ScooterPage({ params: { locale, slug } }: { params: { locale: string, slug: string } }) {
+export default async function ScooterPage({ params }: { params: Promise<{ locale: string, slug: string }> }) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const scooter = scootersData[slug];
   if (!scooter) {
     notFound();
   }
 
-  const t = useTranslations('Fleet');
+  const t = await getTranslations('Fleet');
   const name = t(`items.${slug}.name`);
   const type = t(`items.${slug}.type`);
 
