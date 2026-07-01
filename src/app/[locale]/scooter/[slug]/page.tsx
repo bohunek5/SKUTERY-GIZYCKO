@@ -1,10 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { scootersData } from '@/data/scooters';
 import styles from './page.module.scss';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
 import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft } from 'react-icons/fa';
 import { Link } from '@/i18n/routing';
 

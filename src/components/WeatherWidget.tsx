@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Sun, Cloud, CloudRain, Wind, Loader2 } from 'lucide-react';
 import styles from './WeatherWidget.module.scss';
-import { useTranslations } from 'next-intl';
+
 
 interface WeatherData {
   temp: number;
@@ -13,7 +13,6 @@ interface WeatherData {
 }
 
 export default function WeatherWidget() {
-  const t = useTranslations('Weather');
   const [mounted, setMounted] = useState(false);
   const [data, setData] = useState<WeatherData | null>(null);
 
@@ -45,11 +44,7 @@ export default function WeatherWidget() {
 
   if (!mounted) return null;
 
-  const getConditionText = (code: number) => {
-    if (code === 0 || code === 1) return t('sunny');
-    if (code >= 51 && code <= 99) return t('rain');
-    return t('cloudy');
-  };
+
 
   const getConditionIcon = (code: number) => {
     if (code === 0 || code === 1) return <Sun className={styles.iconSun} size={24} />;

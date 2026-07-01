@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 'use client';
 
@@ -6,7 +7,6 @@ import { useState, useEffect } from 'react';
 import styles from './Navigation.module.scss';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
-import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
 import WeatherWidget from './WeatherWidget';
 

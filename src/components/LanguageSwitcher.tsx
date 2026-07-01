@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/routing';
 import styles from './LanguageSwitcher.module.scss';
 import { Globe } from 'lucide-react';

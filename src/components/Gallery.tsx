@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useTranslations } from 'next-intl';
 import styles from './Gallery.module.scss';

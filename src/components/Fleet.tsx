@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import styles from './Fleet.module.scss';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -25,7 +26,6 @@ const fleetImages: Record<string, string> = {
 
 export default function Fleet() {
   const t = useTranslations('Fleet');
-  const locale = useLocale();
 
   return (
     <section id="fleet" className={`section ${styles.fleet}`}>
