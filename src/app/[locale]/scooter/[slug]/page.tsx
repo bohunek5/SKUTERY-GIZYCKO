@@ -8,7 +8,8 @@ import Footer from '@/components/Footer';
 import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft } from 'react-icons/fa';
 import { Link } from '@/i18n/routing';
 
-export async function generateMetadata({ params: { locale, slug } }: { params: { locale: string, slug: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string, slug: string }> }) {
+  const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: 'Fleet' });
   if (!scootersData[slug]) return { title: 'Not Found' };
   
