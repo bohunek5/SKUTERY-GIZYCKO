@@ -17,7 +17,7 @@ export default function About() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <img src="/assets/IMG-20190819-WA0005.jpg" alt={t('title')} className={styles.image} />
+          <img src="/SKUTERY-GIZYCKO/assets/IMG-20190819-WA0005.jpg" alt={t('title')} className={styles.image} />
           <div className={styles.decoration}></div>
         </motion.div>
         <motion.div 

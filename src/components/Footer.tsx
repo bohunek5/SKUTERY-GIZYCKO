@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className={styles.col}>
             <div className={styles.brand}>
-              <img src="/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
+              <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
               <p>{t('tagline')}</p>
             </div>
             <div className={styles.socials}>

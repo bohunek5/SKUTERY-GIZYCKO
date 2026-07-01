@@ -16,12 +16,12 @@ const fleetData = [
 ];
 
 const fleetImages: Record<string, string> = {
-  vx110_1: '/assets/20210211_181101.jpg',
-  vx110_2: '/assets/vx4.jpg',
-  honda: '/assets/1-1024x719.jpg',
-  vx180: '/assets/IMG-20200809-WA0018.jpg',
-  activ505: '/assets/q1.jpg',
-  quick675: '/assets/q2.jpg',
+  vx110_1: '/SKUTERY-GIZYCKO/assets/20210211_181101.jpg',
+  vx110_2: '/SKUTERY-GIZYCKO/assets/vx4.jpg',
+  honda: '/SKUTERY-GIZYCKO/assets/1-1024x719.jpg',
+  vx180: '/SKUTERY-GIZYCKO/assets/IMG-20200809-WA0018.jpg',
+  activ505: '/SKUTERY-GIZYCKO/assets/q1.jpg',
+  quick675: '/SKUTERY-GIZYCKO/assets/q2.jpg',
 };
 
 export default function Fleet() {

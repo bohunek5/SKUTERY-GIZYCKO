@@ -73,7 +73,7 @@ export default function Contact() {
             ></iframe>
           </div>
           <div className={styles.photoCard}>
-            <img src="/images/tu-jestesmy.jpg" alt="Tutaj nas znajdziesz w porcie" />
+            <img src="/SKUTERY-GIZYCKO/images/tu-jestesmy.jpg" alt="Tutaj nas znajdziesz w porcie" />
             <div className={styles.photoLabel}>
               <Navigation size={18} className="text-primary" /> TU JESTEŚMY
             </div>

@@ -7,12 +7,12 @@ import { useState } from 'react';
 import { X } from 'lucide-react';
 
 const images = [
-  '/assets/20240630_105901-scaled.jpg',
-  '/assets/20240705_150810-scaled.jpg',
-  '/assets/20240601_185516-scaled.jpg',
-  '/assets/20240528_122529-scaled.jpg',
-  '/assets/20200611_213441-scaled.jpg',
-  '/assets/20190805_200721-scaled.jpg'
+  '/SKUTERY-GIZYCKO/assets/20240630_105901-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20240705_150810-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20240601_185516-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20240528_122529-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20200611_213441-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20190805_200721-scaled.jpg'
 ];
 
 export default function Gallery() {
