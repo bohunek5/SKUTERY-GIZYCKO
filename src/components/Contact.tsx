@@ -2,11 +2,13 @@
 "use client";
 import { useTranslations } from 'next-intl';
 import styles from './Contact.module.scss';
-import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { MapPin, Phone, Mail, Navigation, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Contact() {
   const t = useTranslations('Contact');
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   return (
     <section id="contact" className={`section ${styles.contact}`}>
@@ -63,7 +65,7 @@ export default function Contact() {
         >
           <div className={styles.mapCard}>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4715.390038827928!2d21.751336412154366!3d54.05342898083818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1be03b2210a45%3A0xc34a6a575b6a71ab!2sPierkunowo%2036%2C%2011-500%20Pierkunowo!5e0!3m2!1spl!2spl!4v1714151234567!5m2!1spl!2spl" 
+              src="https://maps.google.com/maps?q=Port%20Stranda%20Pierkunowo%20Gi%C5%BCycko&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -72,7 +74,7 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className={styles.photoCard}>
+          <div className={styles.photoCard} onClick={() => setIsLightboxOpen(true)}>
             <img src="/SKUTERY-GIZYCKO/images/tu-jestesmy.jpg" alt="Tutaj nas znajdziesz w porcie" />
             <div className={styles.photoLabel}>
               <Navigation size={18} className="text-primary" /> TU JESTEŚMY
@@ -80,6 +82,31 @@ export default function Contact() {
           </div>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div 
+            className={styles.lightbox}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            <button className={styles.closeButton} onClick={() => setIsLightboxOpen(false)}>
+              <X size={32} />
+            </button>
+            <motion.img 
+              src="/SKUTERY-GIZYCKO/images/tu-jestesmy.jpg" 
+              alt="Tu jesteśmy" 
+              className={styles.lightboxImage}
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image itself
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
