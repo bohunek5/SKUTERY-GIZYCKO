@@ -5,8 +5,9 @@ import { scootersData } from '@/data/scooters';
 import styles from './page.module.scss';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft } from 'react-icons/fa';
+import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft, FaPhone } from 'react-icons/fa';
 import { Link } from '@/i18n/routing';
+import ScooterSlider from '@/components/ScooterSlider';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string, slug: string }> }) {
   const { locale, slug } = await params;
@@ -58,32 +59,36 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
         <div className={styles.grid}>
           {/* Left Column: Details & Specs */}
           <div className={styles.details}>
-            <h2>Specyfikacja Techniczna</h2>
+            <div className={styles.descriptionCard}>
+              <h2>Opis sprzętu</h2>
+              <p>{scooter.description}</p>
+            </div>
             
+            <h2 className={styles.specsTitle}>Specyfikacja Techniczna</h2>
             <div className={styles.specsGrid}>
               <div className={styles.specCard}>
-                <FaTachometerAlt className={styles.icon} />
+                <div className={styles.iconBox}><FaTachometerAlt /></div>
                 <div className={styles.specInfo}>
                   <span className={styles.label}>Prędkość max / Moc</span>
                   <span className={styles.value}>{scooter.maxSpeed} / {scooter.horsepower}</span>
                 </div>
               </div>
               <div className={styles.specCard}>
-                <FaUsers className={styles.icon} />
+                <div className={styles.iconBox}><FaUsers /></div>
                 <div className={styles.specInfo}>
                   <span className={styles.label}>Pojemność</span>
                   <span className={styles.value}>{scooter.capacity}</span>
                 </div>
               </div>
               <div className={styles.specCard}>
-                <FaArrowsAltH className={styles.icon} />
+                <div className={styles.iconBox}><FaArrowsAltH /></div>
                 <div className={styles.specInfo}>
                   <span className={styles.label}>Długość</span>
                   <span className={styles.value}>{scooter.length}</span>
                 </div>
               </div>
               <div className={styles.specCard}>
-                <FaWeightHanging className={styles.icon} />
+                <div className={styles.iconBox}><FaWeightHanging /></div>
                 <div className={styles.specInfo}>
                   <span className={styles.label}>Waga</span>
                   <span className={styles.value}>{scooter.weight}</span>
@@ -91,28 +96,16 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
               </div>
             </div>
 
-            <div className={styles.description}>
-              <h3>Opis sprzętu</h3>
-              <p>{scooter.description}</p>
-              
-              <div className={styles.actions}>
-                <a href={`tel:+48507697292`} className="btn-primary">
-                  Zadzwoń i zarezerwuj
-                </a>
-              </div>
+            <div className={styles.actions}>
+              <a href="tel:+48507697292" className="btn-primary">
+                <FaPhone style={{ marginRight: '8px' }} /> Zadzwoń i zarezerwuj
+              </a>
             </div>
           </div>
 
           {/* Right Column: Gallery */}
           <div className={styles.gallery}>
-            <h2>Galeria zdjęć</h2>
-            <div className={styles.imageGrid}>
-              {scooter.gallery.map((img, idx) => (
-                <div key={idx} className={styles.imgWrapper}>
-                  <img src={img} alt={`${name} ${idx + 1}`} />
-                </div>
-              ))}
-            </div>
+            <ScooterSlider images={scooter.gallery} />
           </div>
         </div>
       </div>

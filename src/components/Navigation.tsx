@@ -4,6 +4,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
+import { Link } from '@/i18n/routing';
 import styles from './Navigation.module.scss';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
@@ -31,11 +32,11 @@ export default function Navigation() {
         </div>
 
         <div className={`${styles.links} ${mobileMenuOpen ? styles.open : ''}`}>
-          <a href="#about" onClick={() => setMobileMenuOpen(false)}>{t('about')}</a>
-          <a href="#fleet" onClick={() => setMobileMenuOpen(false)}>{t('fleet')}</a>
-          <a href="#howItWorks" onClick={() => setMobileMenuOpen(false)}>{t('howItWorks')}</a>
-          <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>{t('gallery')}</a>
-          <a href="#contact" onClick={() => setMobileMenuOpen(false)}>{t('contact')}</a>
+          <Link href="/#about" onClick={() => setMobileMenuOpen(false)}>{t('about')}</Link>
+          <Link href="/#fleet" onClick={() => setMobileMenuOpen(false)}>{t('fleet')}</Link>
+          <Link href="/#howItWorks" onClick={() => setMobileMenuOpen(false)}>{t('howItWorks')}</Link>
+          <Link href="/#gallery" onClick={() => setMobileMenuOpen(false)}>{t('gallery')}</Link>
+          <Link href="/#contact" onClick={() => setMobileMenuOpen(false)}>{t('contact')}</Link>
           
           <div className={styles.mobileActions}>
             <WeatherWidget />
@@ -43,7 +44,7 @@ export default function Navigation() {
               <ThemeToggle />
               <LanguageSwitcher />
             </div>
-            <a href="#contact" className="btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('bookNow')}</a>
+            <Link href="/#contact" className="btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('bookNow')}</Link>
           </div>
         </div>
 
@@ -51,7 +52,7 @@ export default function Navigation() {
           <WeatherWidget />
           <ThemeToggle />
           <LanguageSwitcher />
-          <a href="#contact" className="btn-primary">{t('bookNow')}</a>
+          <Link href="/#contact" className="btn-primary">{t('bookNow')}</Link>
         </div>
 
         <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle menu">
