@@ -27,9 +27,10 @@ interface HeroProps {
   videoSrc?: string;
   ctaText?: string;
   ctaLink?: string;
+  compact?: boolean;
 }
 
-export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink }: HeroProps) {
+export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, compact }: HeroProps) {
   const t = useTranslations('Hero');
 
   const finalTitle = title || t('title');
@@ -39,7 +40,7 @@ export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink }: He
   const finalCtaLink = ctaLink || "/kontakt";
 
   return (
-    <section className={styles.hero} id="home">
+    <section className={`${styles.hero} ${compact ? styles.compact : ''}`} id="home">
       <div className={styles.videoWrapper}>
         <video 
           autoPlay 

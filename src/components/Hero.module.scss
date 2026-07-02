@@ -9,6 +9,11 @@
   padding-top: 80px; /* Offset for navigation */
 }
 
+.compact {
+  height: 60vh !important;
+  min-height: 400px !important;
+}
+
 .videoWrapper {
   position: absolute;
   top: 0;

@@ -157,15 +157,15 @@
     align-items: center;
     gap: 6px;
     margin-left: auto;
-    margin-right: 8px;
-    transform: scale(0.9);
+    margin-right: 20px;
+    transform: scale(0.85);
     transform-origin: right center;
   }
 
   .weatherMini {
-    transform: scale(0.7);
+    transform: scale(0.6);
     transform-origin: right center;
-    margin-right: -15px; /* offset the visual gap caused by scale */
+    margin-right: -25px; /* offset the visual gap caused by scale */
   }
 
   .mobileToggle {

@@ -35,12 +35,20 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150810-scaled.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20210211_181101.jpg',
     gallery: [
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150810-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150824-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240706_105325-scaled.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150955-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240706_105325-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150824-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150810-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240630_105901-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240621_185024-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_163011.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_162309.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20210211_181101.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20200709-WA0006.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20200709-WA0018.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20200809-WA0018.jpg'
     ]
   },
   'yamaha-vx-2': {
@@ -62,11 +70,16 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx2.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240621_185024-scaled.jpg',
     gallery: [
-      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx2.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx3.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx4.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240621_185024-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240630_105901-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150810-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150824-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150955-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240706_105325-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_162309-1-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_163011-1-scaled.jpg'
     ]
   },
   'honda-aquatrax': {
@@ -88,12 +101,13 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20210119-WA0010.jpg',
     gallery: [
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20210119-WA0010.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20210119-WA0009.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20200709-WA0026.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200626_220330-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200626_204508-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200625_204518-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20200920-WA0004.jpg'
     ]
   },
   'yamaha-vx-180km': {
@@ -140,11 +154,10 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505-2.jpg',
     gallery: [
-      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505-2.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/q1.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg'
     ]
   },
   'lodz-quicksilver-675': {
@@ -165,13 +178,14 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/q2.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2024/07/IMG-20240508-WA0051.jpg',
     gallery: [
-      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/q2.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2024/07/IMG-20240508-WA0051.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2024/07/IMG-20240510-WA0005.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2024/07/Screenshot_20240715_120347_OLXpl.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/07/Screenshot_20240715_120350_OLXpl.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/07/Screenshot_20240715_120350_OLXpl.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/07/Screenshot_20240715_120352_OLXpl.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/07/bez-nazwy.png'
     ]
   }
 };
