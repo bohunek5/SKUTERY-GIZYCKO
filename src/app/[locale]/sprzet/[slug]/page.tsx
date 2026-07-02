@@ -46,10 +46,11 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
       
       {/* 1. HERO SECTION (Split on PC, Full with gradient on Mobile) */}
       <section className={styles.heroLayout}>
+        <Link href="/sprzet" className={styles.backBtn}>
+          <FaArrowLeft /> Wróć do floty
+        </Link>
+
         <div className={styles.heroContent}>
-          <Link href="/sprzet" className={styles.backBtn}>
-            <FaArrowLeft /> Wróć do floty
-          </Link>
 
           <div className={styles.textContent}>
             <span className={styles.badge}>{type}</span>
