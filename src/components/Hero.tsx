@@ -43,7 +43,7 @@ export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, comp
 
   return (
     <section className={`${styles.hero} ${compact ? styles.compact : ''}`} id="home">
-      {videoSrc && (
+      {finalVideoSrc && (
         <div className={styles.videoWrapper}>
           <video
             autoPlay

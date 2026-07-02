@@ -132,8 +132,8 @@ export const scootersData: Record<string, ScooterSpec> = {
     mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vr1.jpg',
     gallery: [
       'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vr1.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_163011-1-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_162309-1-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx2.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx3.jpg'
     ]
   },
   'lodz-quicksilver-505-open': {
@@ -154,7 +154,7 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505-2.jpg',
     gallery: [
       'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505-2.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg'

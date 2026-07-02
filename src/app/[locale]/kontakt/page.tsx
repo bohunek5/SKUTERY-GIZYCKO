@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('ContactPage');
+  const t = await getTranslations('Contact');
 
   return (
     <main style={{ minHeight: '100vh', background: 'var(--bg-base)' }}>
