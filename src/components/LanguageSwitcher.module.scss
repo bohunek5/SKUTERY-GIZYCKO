@@ -4,58 +4,21 @@
   align-items: center;
 }
 
-/* Row variant - just show the dropdown content as a static row and hide the toggle */
-.row {
-  .dropdownToggle {
-    display: none;
-  }
-  
-  .dropdown {
-    position: static;
-    transform: none;
-    flex-direction: row;
-    background: transparent;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-    backdrop-filter: none;
-    opacity: 1;
-    visibility: visible;
-    margin-top: 0;
-    gap: 8px;
-  }
-}
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 
-/* Responsive variant - row on desktop, dropdown on mobile */
-.responsive {
-  @media (min-width: 1025px) {
-    .dropdownToggle {
-      display: none;
-    }
-    
-    .dropdown {
-      position: static;
-      transform: none;
-      flex-direction: row;
-      background: transparent;
-      padding: 0;
-      border: none;
-      box-shadow: none;
-      backdrop-filter: none;
-      opacity: 1;
-      visibility: visible;
-      margin-top: 0;
-      gap: 8px;
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .dropdownToggle {
-      display: flex;
-    }
-    .dropdown {
-      /* Uses default absolute dropdown styles */
-    }
+  :global([data-theme='light']) & {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
 

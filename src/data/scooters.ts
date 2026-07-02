@@ -35,12 +35,12 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/assets/20210211_181101.jpg',
+    mainImage: '/SKUTERY-GIZYCKO/assets/20210211_181101.jpg',
     gallery: [
-      '/assets/20210211_181101.jpg',
-      '/assets/20210211_181212.jpg',
-      '/assets/20190805_200721-scaled.jpg',
-      '/assets/20200611_205511-scaled.jpg'
+      '/SKUTERY-GIZYCKO/assets/20210211_181101.jpg',
+      '/SKUTERY-GIZYCKO/assets/20210211_181212.jpg',
+      '/SKUTERY-GIZYCKO/assets/20190805_200721-scaled.jpg',
+      '/SKUTERY-GIZYCKO/assets/20200611_205511-scaled.jpg'
     ]
   },
   'yamaha-vx-2': {
@@ -62,12 +62,12 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/assets/vx4.jpg',
+    mainImage: '/SKUTERY-GIZYCKO/assets/vx4.jpg',
     gallery: [
-      '/assets/vx4.jpg',
-      '/assets/IMG-20190819-WA0005.jpg',
-      '/assets/IMG-20200920-WA0004-1024x768.jpg',
-      '/assets/20200611_211053-scaled.jpg'
+      '/SKUTERY-GIZYCKO/assets/vx4.jpg',
+      '/SKUTERY-GIZYCKO/assets/IMG-20190819-WA0005.jpg',
+      '/SKUTERY-GIZYCKO/assets/IMG-20200920-WA0004-1024x768.jpg',
+      '/SKUTERY-GIZYCKO/assets/20200611_211053-scaled.jpg'
     ]
   },
   'honda-aquatrax': {
@@ -89,11 +89,11 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/assets/1-1024x719.jpg',
+    mainImage: '/SKUTERY-GIZYCKO/assets/1-1024x719.jpg',
     gallery: [
-      '/assets/1-1024x719.jpg',
-      '/assets/20240528_122225-scaled.jpg',
-      '/assets/20240528_122529-scaled.jpg'
+      '/SKUTERY-GIZYCKO/assets/1-1024x719.jpg',
+      '/SKUTERY-GIZYCKO/assets/20240528_122225-scaled.jpg',
+      '/SKUTERY-GIZYCKO/assets/20240528_122529-scaled.jpg'
     ]
   },
   'yamaha-vx-180km': {
@@ -115,12 +115,12 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/assets/IMG-20200809-WA0018.jpg',
+    mainImage: '/SKUTERY-GIZYCKO/assets/IMG-20200809-WA0018.jpg',
     gallery: [
-      '/assets/IMG-20200809-WA0018.jpg',
-      '/assets/20240601_182330-scaled.jpg',
-      '/assets/20240601_182339-scaled.jpg',
-      '/assets/20240601_182359-scaled.jpg'
+      '/SKUTERY-GIZYCKO/assets/IMG-20200809-WA0018.jpg',
+      '/SKUTERY-GIZYCKO/assets/20240601_182330-scaled.jpg',
+      '/SKUTERY-GIZYCKO/assets/20240601_182339-scaled.jpg',
+      '/SKUTERY-GIZYCKO/assets/20240601_182359-scaled.jpg'
     ]
   },
   'lodz-quicksilver-505-open': {
@@ -141,11 +141,11 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/assets/q1.jpg',
+    mainImage: '/SKUTERY-GIZYCKO/assets/q1.jpg',
     gallery: [
-      '/assets/q1.jpg',
-      '/assets/20240601_185516-scaled.jpg',
-      '/assets/20240630_105901-scaled.jpg'
+      '/SKUTERY-GIZYCKO/assets/q1.jpg',
+      '/SKUTERY-GIZYCKO/assets/20240601_185516-scaled.jpg',
+      '/SKUTERY-GIZYCKO/assets/20240630_105901-scaled.jpg'
     ]
   },
   'lodz-quicksilver-675': {
@@ -166,11 +166,11 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/assets/q2.jpg',
+    mainImage: '/SKUTERY-GIZYCKO/assets/q2.jpg',
     gallery: [
-      '/assets/q2.jpg',
-      '/assets/20240705_150810-scaled.jpg',
-      '/assets/slid2-scaled.jpg'
+      '/SKUTERY-GIZYCKO/assets/q2.jpg',
+      '/SKUTERY-GIZYCKO/assets/20240705_150810-scaled.jpg',
+      '/SKUTERY-GIZYCKO/assets/slid2-scaled.jpg'
     ]
   }
 };

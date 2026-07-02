@@ -21,12 +21,22 @@ const itemVariants: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
 
-export default function Hero() {
+interface HeroProps {
+  title?: string;
+  subtitle?: string;
+  videoSrc?: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink }: HeroProps) {
   const t = useTranslations('Hero');
 
-  // Split title if it contains a space or newline to apply highlight to the last part
-  // Or just rely on translations if we had HTML in there. For now, we render it directly.
-  const titleText = t('title');
+  const finalTitle = title || t('title');
+  const finalSubtitle = subtitle || t('subtitle');
+  const finalVideoSrc = videoSrc || "/SKUTERY-GIZYCKO/videos/jetski.mp4";
+  const finalCtaText = ctaText || t('cta');
+  const finalCtaLink = ctaLink || "/kontakt";
 
   return (
     <section className={styles.hero} id="home">
@@ -38,7 +48,7 @@ export default function Hero() {
           playsInline 
           className={styles.videoBackground}
         >
-          <source src="/SKUTERY-GIZYCKO/videos/jetski.mp4" type="video/mp4" />
+          <source src={finalVideoSrc} type="video/mp4" />
         </video>
       </div>
       <div className={styles.overlay}></div>
@@ -50,15 +60,15 @@ export default function Hero() {
         animate="show"
       >
         <motion.h1 className={styles.heroTitle} variants={itemVariants}>
-          {titleText}
+          {finalTitle}
         </motion.h1>
         
         <motion.p className={styles.subtitle} variants={itemVariants}>
-          {t('subtitle')}
+          {finalSubtitle}
         </motion.p>
         
         <motion.div className={styles.actionGroup} variants={itemVariants}>
-          <Link href="/kontakt" className="btn-primary">{t('cta')}</Link>
+          <Link href={finalCtaLink as any} className="btn-primary">{finalCtaText}</Link>
         </motion.div>
       </motion.div>
     </section>

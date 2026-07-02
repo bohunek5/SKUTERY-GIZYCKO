@@ -29,10 +29,10 @@ export default function LanguageSwitcher({ variant = 'responsive' }: { variant?:
   }, []);
 
   const languages = [
-    { code: 'pl', label: 'PL', emoji: '🇵🇱' },
-    { code: 'en', label: 'EN', emoji: '🇬🇧' },
-    { code: 'de', label: 'DE', emoji: '🇩🇪' },
-    { code: 'lt', label: 'LT', emoji: '🇱🇹' },
+    { code: 'pl', label: 'PL' },
+    { code: 'en', label: 'EN' },
+    { code: 'de', label: 'DE' },
+    { code: 'lt', label: 'LT' },
   ];
 
   const activeLang = languages.find(l => l.code === locale) || languages[0];
@@ -44,7 +44,7 @@ export default function LanguageSwitcher({ variant = 'responsive' }: { variant?:
         onClick={() => setIsOpen(!isOpen)}
         title={activeLang.label}
       >
-        {activeLang.emoji}
+        <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>{activeLang.label}</span>
         <ChevronDown className={`${styles.chevron} ${isOpen ? styles.open : ''}`} size={16} />
       </button>
 
@@ -56,7 +56,7 @@ export default function LanguageSwitcher({ variant = 'responsive' }: { variant?:
             className={`${styles.flagBtn} ${locale === lng.code ? styles.active : ''}`}
             title={lng.label}
           >
-            {lng.emoji}
+            <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>{lng.label}</span>
           </button>
         ))}
       </div>

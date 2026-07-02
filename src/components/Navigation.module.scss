@@ -22,9 +22,10 @@
   border-radius: 100px;
   padding: 0 32px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  
 
   :global([data-theme='light']) & {
-    background: rgba(243, 244, 246, 0.95); /* Szare dla odcięcia w trybie jasnym */
+    background: rgba(243, 244, 246, 0.95);
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
@@ -34,10 +35,12 @@
   display: flex;
   align-items: center;
   z-index: 1001;
+  
+  flex-shrink: 0;
 }
 
 .logo img {
-  height: 135px;
+  height: 50px;
   width: auto;
   transition: transform 0.3s ease;
   display: block;
@@ -129,18 +132,20 @@
 /* Mobile Menu Styles */
 @media (max-width: 1024px) {
   .nav {
-    top: 8px;
+    top: 16px;
     width: calc(100% - 16px);
   }
   
   .navContainer {
     height: 70px;
-    padding: 0 20px;
+    padding: 0 16px;
     border-radius: 20px;
   }
 
   .logo img {
-    height: 94px;
+    height: 40px;
+    max-width: 140px;
+    object-fit: contain;
   }
 
   .desktopActions {
@@ -156,27 +161,8 @@
   }
 
   .weatherMini {
-    & > div {
-      height: 32px !important;
-      padding: 0 8px !important;
-      gap: 8px !important;
-      font-size: 0.8rem !important;
-      white-space: nowrap;
-      
-      & > div {
-        gap: 4px !important;
-        white-space: nowrap;
-        span {
-          display: inline-block !important;
-          white-space: nowrap;
-        }
-      }
-      
-      svg {
-        width: 16px !important;
-        height: 16px !important;
-      }
-    }
+    transform: scale(0.85);
+    transform-origin: right center;
   }
 
   .mobileToggle {

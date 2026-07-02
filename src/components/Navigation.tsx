@@ -28,20 +28,24 @@ export default function Navigation() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navContainer}`}>
         <div className={styles.logo}>
-          <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
+          <Link href="/">
+            <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
+          </Link>
         </div>
 
         <div className={styles.mobileTopBarControls}>
           <div className={styles.weatherMini}>
             <WeatherWidget />
           </div>
-          <LanguageSwitcher variant="dropdown" />
+          <LanguageSwitcher />
           <ThemeToggle />
         </div>
 
         <div className={`${styles.links} ${mobileMenuOpen ? styles.open : ''}`}>
           <div className={styles.mobileMenuLogo}>
-            <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
+            <Link href="/" onClick={() => setMobileMenuOpen(false)} style={{ display: 'block' }}>
+              <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
+            </Link>
           </div>
           <Link href="/o-nas" onClick={() => setMobileMenuOpen(false)}>{t('about')}</Link>
           <Link href="/sprzet" onClick={() => setMobileMenuOpen(false)}>{t('fleet')}</Link>
@@ -57,7 +61,7 @@ export default function Navigation() {
         <div className={styles.desktopActions}>
           <WeatherWidget />
           <ThemeToggle />
-          <LanguageSwitcher variant="dropdown" />
+          <LanguageSwitcher />
           <Link href="/kontakt" className="btn-primary">{t('bookNow')}</Link>
         </div>
 

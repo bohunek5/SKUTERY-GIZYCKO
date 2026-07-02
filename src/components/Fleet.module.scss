@@ -60,18 +60,16 @@
 
 @media (max-width: 768px) {
   .bentoGrid {
-    grid-template-columns: 1fr;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 24px;
   }
   
   .bentoCard {
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
+    height: 400px;
   }
-
-  .span2col, .span3col, .span4col { grid-column: span 1 !important; }
-  .span2row { grid-row: span 1 !important; }
 }
 
 .imageWrapper {

@@ -46,9 +46,7 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
       
       <div className={styles.heroSection}>
         <div className={styles.heroBg}>
-          <video autoPlay muted loop playsInline className={styles.bgImg} style={{ objectFit: 'cover', width: '100%', height: '100%' }}>
-            <source src="/SKUTERY-GIZYCKO/videos/sprzet.mp4" type="video/mp4" />
-          </video>
+          <img src={scooter.mainImage} alt={name} className={styles.bgImg} />
           <div className={styles.overlay}></div>
         </div>
         
@@ -56,86 +54,124 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
           <Link href="/sprzet" className={styles.backBtn}>
             <FaArrowLeft /> Wróć do floty
           </Link>
-          <div className={styles.titleWrapper}>
-            <h1>{name}</h1>
-            <span className={styles.typeBadge}>{type}</span>
+          
+          <div className={styles.heroMain}>
+            <div className={styles.titleWrapper}>
+              <span className={styles.typeBadge}>{type}</span>
+              <h1>{name}</h1>
+              <p className={styles.heroShortDesc}>{scooter.description}</p>
+              
+              <div className={styles.heroQuickSpecs}>
+                <div className={styles.quickSpec}>
+                  <FaTachometerAlt />
+                  <span>{scooter.horsepower}</span>
+                </div>
+                <div className={styles.quickSpec}>
+                  <FaUsers />
+                  <span>{scooter.capacity}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.bookingCard}>
+              <div className={styles.priceHeader}>
+                <span className={styles.priceLabel}>Wynajem od</span>
+                <div className={styles.priceValue}>{scooter.pricePerHour.replace('zł*', '')} <span>PLN / godz.</span></div>
+              </div>
+              
+              <div className={styles.priceList}>
+                <div className={styles.priceRow}>
+                  <span>1 godzina</span>
+                  <strong>{scooter.pricePerHour}</strong>
+                </div>
+                <div className={styles.priceRow}>
+                  <span>Cały dzień</span>
+                  <strong>{scooter.pricePerDay}</strong>
+                </div>
+              </div>
+
+              <a href="tel:+48507697292" className={`btn-primary ${styles.bookBtn}`}>
+                <FaPhone /> Zadzwoń i Zarezerwuj
+              </a>
+              <p className={styles.bookingNote}>Brak ukrytych kosztów. Szybka rezerwacja telefoniczna.</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div className={`container ${styles.contentSection}`}>
-        <div className={styles.grid}>
-          {/* Left Column: Details & Specs */}
-          <div className={styles.details}>
-            <div className={styles.descriptionCard}>
-              <h2>Opis sprzętu</h2>
-              <p>{scooter.description}</p>
-            </div>
-            
-            <h2 className={styles.specsTitle}>Specyfikacja Techniczna</h2>
-            <div className={styles.specsGrid}>
-              <div className={styles.specCard}>
-                <div className={styles.iconBox}><FaTachometerAlt /></div>
-                <div className={styles.specInfo}>
-                  <span className={styles.label}>Prędkość max / Moc</span>
-                  <span className={styles.value}>{scooter.maxSpeed} / {scooter.horsepower}</span>
-                </div>
-              </div>
-              <div className={styles.specCard}>
-                <div className={styles.iconBox}>
-                  <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>PLN</span>
-                </div>
-                <div className={styles.specInfo}>
-                  <span className={styles.label}>Cena wynajmu</span>
-                  <span className={styles.value}>{scooter.pricePerHour} / godz. <br/> {scooter.pricePerDay} / dzień</span>
-                </div>
-              </div>
-              <div className={styles.specCard}>
-                <div className={styles.iconBox}><FaUsers /></div>
-                <div className={styles.specInfo}>
-                  <span className={styles.label}>Pojemność</span>
-                  <span className={styles.value}>{scooter.capacity}</span>
-                </div>
-              </div>
-              <div className={styles.specCard}>
-                <div className={styles.iconBox}><FaArrowsAltH /></div>
-                <div className={styles.specInfo}>
-                  <span className={styles.label}>Długość</span>
-                  <span className={styles.value}>{scooter.length}</span>
-                </div>
-              </div>
-              <div className={styles.specCard}>
-                <div className={styles.iconBox}><FaWeightHanging /></div>
-                <div className={styles.specInfo}>
-                  <span className={styles.label}>Waga {scooter.fuelTank && "/ Zbiornik"}</span>
-                  <span className={styles.value}>{scooter.weight} {scooter.fuelTank && `/ ${scooter.fuelTank}`}</span>
-                </div>
-              </div>
-            </div>
-
-            {scooter.rules && scooter.rules.length > 0 && (
-              <div className={styles.rulesCard}>
-                <h2>Dodatkowe Informacje</h2>
-                <ul className={styles.rulesList}>
-                  {scooter.rules.map((rule, idx) => (
-                    <li key={idx}>{rule}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            <div className={styles.actions}>
-              <a href="tel:+48507697292" className="btn-primary">
-                <FaPhone style={{ marginRight: '8px' }} /> Zadzwoń i zarezerwuj
-              </a>
+        
+        <h2 className={styles.sectionTitle}>Specyfikacja techniczna</h2>
+        <div className={styles.fullSpecsGrid}>
+          <div className={styles.specItem}>
+            <div className={styles.iconBox}><FaTachometerAlt /></div>
+            <div className={styles.specInfo}>
+              <span className={styles.label}>Prędkość max</span>
+              <span className={styles.value}>{scooter.maxSpeed}</span>
             </div>
           </div>
-
-          {/* Right Column: Gallery */}
-          <div className={styles.gallery}>
-            <ScooterSlider images={scooter.gallery} />
+          <div className={styles.specItem}>
+            <div className={styles.iconBox}><FaTachometerAlt /></div>
+            <div className={styles.specInfo}>
+              <span className={styles.label}>Moc silnika</span>
+              <span className={styles.value}>{scooter.horsepower}</span>
+            </div>
           </div>
+          <div className={styles.specItem}>
+            <div className={styles.iconBox}><FaUsers /></div>
+            <div className={styles.specInfo}>
+              <span className={styles.label}>Pojemność</span>
+              <span className={styles.value}>{scooter.capacity}</span>
+            </div>
+          </div>
+          <div className={styles.specItem}>
+            <div className={styles.iconBox}><FaArrowsAltH /></div>
+            <div className={styles.specInfo}>
+              <span className={styles.label}>Długość</span>
+              <span className={styles.value}>{scooter.length}</span>
+            </div>
+          </div>
+          <div className={styles.specItem}>
+            <div className={styles.iconBox}><FaWeightHanging /></div>
+            <div className={styles.specInfo}>
+              <span className={styles.label}>Waga</span>
+              <span className={styles.value}>{scooter.weight}</span>
+            </div>
+          </div>
+          {scooter.fuelTank && (
+            <div className={styles.specItem}>
+              <div className={styles.iconBox}><FaWeightHanging /></div>
+              <div className={styles.specInfo}>
+                <span className={styles.label}>Zbiornik paliwa</span>
+                <span className={styles.value}>{scooter.fuelTank}</span>
+              </div>
+            </div>
+          )}
         </div>
+
+        <h2 className={styles.sectionTitle}>Galeria sprzętu</h2>
+        <div className={styles.imageGrid}>
+          {scooter.gallery.map((img, idx) => (
+            <div key={idx} className={`${styles.galleryImgWrapper} ${idx === 0 ? styles.featured : ''}`}>
+              <img src={img} alt={`${name} - Zdjęcie ${idx + 1}`} className={styles.galleryImg} />
+            </div>
+          ))}
+        </div>
+
+        {scooter.rules && scooter.rules.length > 0 && (
+          <div className={styles.rulesSection}>
+            <h2 className={styles.sectionTitle}>Ważne informacje</h2>
+            <div className={styles.rulesGrid}>
+              {scooter.rules.map((rule, idx) => (
+                <div key={idx} className={styles.ruleCard}>
+                  <div className={styles.checkIcon}>✓</div>
+                  <p>{rule}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
       </div>
     </main>
   );
