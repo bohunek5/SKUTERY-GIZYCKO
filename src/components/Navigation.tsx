@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-'use client';
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
@@ -38,6 +37,17 @@ export default function Navigation() {
           </Link>
         </div>
 
+        {!mobileMenuOpen && (
+          <div className={styles.mobileTopBarControls}>
+            <WeatherWidget />
+            <ThemeToggle compact={true} />
+            <LanguageSwitcher compact={true} />
+          </div>
+        )}
+        <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle menu">
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
         <div className={`${styles.links} ${mobileMenuOpen ? styles.open : ''}`}>
           <div className={styles.mobileMenuLogo}>
             <Link href="/" onClick={(e) => {
@@ -61,18 +71,10 @@ export default function Navigation() {
           </div>
         </div>
 
-        {!mobileMenuOpen && (
-          <div className={styles.centerWidgets}>
-            <WeatherWidget />
-            <ThemeToggle compact={true} />
-            <LanguageSwitcher compact={true} />
-          </div>
-        )}
-        <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle menu">
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-
         <div className={styles.desktopActions}>
+          <WeatherWidget />
+          <ThemeToggle />
+          <LanguageSwitcher />
           <Link href="/kontakt" className="btn-primary">{t('bookNow')}</Link>
         </div>
       </div>
