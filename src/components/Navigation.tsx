@@ -39,7 +39,7 @@ export default function Navigation() {
         </div>
 
         <div className={styles.mobileTopBarControls}>
-          <WeatherWidget compact={true} />
+          <WeatherWidget />
           <ThemeToggle compact={true} />
           <LanguageSwitcher compact={true} />
         </div>
