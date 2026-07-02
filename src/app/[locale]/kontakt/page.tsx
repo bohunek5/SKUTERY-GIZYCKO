@@ -12,9 +12,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <Hero 
         title={t('title')} 
         subtitle={t('subtitle')} 
+        videoSrc="/SKUTERY-GIZYCKO/videos/kontakt.mp4#t=2"
         showArrowDown={true}
       />
-      <div style={{ marginTop: '-60px', paddingBottom: '80px', position: 'relative', zIndex: 10 }}>
+      <div style={{ paddingBottom: '80px', position: 'relative', zIndex: 10 }}>
         <Contact />
       </div>
     </main>

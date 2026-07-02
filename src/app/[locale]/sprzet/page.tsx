@@ -21,10 +21,11 @@ export default async function SprzetPage({ params }: { params: Promise<{ locale:
       <Hero 
         title="Sprzęt" 
         subtitle="Nasza oferta" 
+        videoSrc="/SKUTERY-GIZYCKO/videos/oferta.mp4#t=2"
         showArrowDown={true}
       />
 
-      <div style={{ background: 'var(--bg-primary)', marginTop: '-60px', position: 'relative', zIndex: 10 }}>
+      <div style={{ background: 'var(--bg-primary)', position: 'relative', zIndex: 10 }}>
         <Fleet />
       </div>
     </main>
