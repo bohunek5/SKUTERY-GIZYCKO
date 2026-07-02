@@ -13,6 +13,11 @@
 .compact {
   height: 60vh !important;
   min-height: 400px !important;
+
+  @media (max-width: 768px) {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
 }
 
 .videoWrapper {

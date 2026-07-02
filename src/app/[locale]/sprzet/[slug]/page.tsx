@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { scootersData } from '@/data/scooters';
 import styles from './page.module.scss';
-import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft, FaPhone } from 'react-icons/fa';
+import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft, FaPhone, FaArrowDown } from 'react-icons/fa';
 import { Link } from '@/i18n/routing';
 import ClientImageGallery from '@/components/ClientImageGallery';
 
@@ -73,7 +73,7 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
               </div>
             </div>
 
-            <div className={styles.bookingCard}>
+            <div className={styles.desktopBookingCard}>
               <div className={styles.priceHeader}>
                 <span className={styles.priceLabel}>Wynajem od</span>
                 <div className={styles.priceValue}>{scooter.pricePerHour.replace('zł*', '')} <span>PLN / godz.</span></div>
@@ -96,7 +96,25 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
               <p className={styles.bookingNote}>Brak ukrytych kosztów. Szybka rezerwacja telefoniczna.</p>
             </div>
           </div>
+          
+          <button 
+            className={styles.scrollDownBtn} 
+            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+            aria-label="Przewiń w dół"
+          >
+            <FaArrowDown />
+          </button>
         </div>
+      </div>
+
+      <div className={styles.mobileBookingBar}>
+        <div className={styles.mobilePriceInfo}>
+          <span className={styles.priceLabel}>Wynajem od</span>
+          <div className={styles.priceValue}>{scooter.pricePerHour.replace('zł*', '')} <span>PLN / h</span></div>
+        </div>
+        <a href="tel:+48507697292" className={`btn-primary ${styles.mobileBookBtn}`}>
+          <FaPhone /> Zadzwoń
+        </a>
       </div>
 
       <div className={`container ${styles.contentSection}`}>
@@ -150,7 +168,9 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
         </div>
 
         <h2 className={styles.sectionTitle}>Galeria sprzętu</h2>
-        <ClientImageGallery images={scooter.gallery} name={name} />
+        <div className={styles.galleryWrapper}>
+          <ClientImageGallery images={scooter.gallery} name={name} />
+        </div>
 
         {scooter.rules && scooter.rules.length > 0 && (
           <div className={styles.rulesSection}>

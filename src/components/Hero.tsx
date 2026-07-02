@@ -76,7 +76,7 @@ export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, comp
         <motion.div className={styles.actionGroup} variants={itemVariants}>
           {showArrowDown ? (
             <button 
-              onClick={() => window.scrollBy({ top: window.innerHeight * 0.6, behavior: 'smooth' })} 
+              onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })} 
               className={styles.arrowDownBtn}
               aria-label="Scroll down"
             >
