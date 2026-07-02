@@ -94,7 +94,7 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20210119-WA0010.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg',
     gallery: [
       'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20210119-WA0010.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20210119-WA0009.jpg',
