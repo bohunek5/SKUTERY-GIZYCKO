@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,71895,t=>{"use strict";var e=t.i(51905);t.s(["default",0,function(){return(0,e.useEffect)(()=>{window.location.replace("/SKUTERY-GIZYCKO/pl")},[]),null}])}]);
