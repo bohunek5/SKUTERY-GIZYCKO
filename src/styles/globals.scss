@@ -54,6 +54,8 @@
 
 html {
   scroll-behavior: smooth; /* Native smooth scroll for anchor links */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -62,6 +64,8 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.5s ease, color 0.5s ease;
@@ -120,12 +124,12 @@ a {
   background: var(--primary);
   color: #fff;
   font-weight: 600;
-  padding: 16px 32px;
-  border-radius: var(--radius-sm);
+  padding: 12px 28px;
+  border-radius: 100px;
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   letter-spacing: 0.5px;
 }
 

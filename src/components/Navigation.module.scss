@@ -100,6 +100,10 @@
   flex-shrink: 0;
 }
 
+.mobileTopBarControls {
+  display: none;
+}
+
 .mobileActions {
   display: none;
 }
@@ -132,15 +136,39 @@
   }
 
   .logo img {
-    height: 40px;
+    height: 32px;
   }
 
   .desktopActions {
     display: none;
   }
 
+  .mobileTopBarControls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .weatherMini {
+    /* Hide the wind section of the weather widget on mobile */
+    & > div > div:nth-child(3) {
+      display: none !important;
+    }
+    
+    /* Make the widget smaller */
+    & > div {
+      height: 32px !important;
+      padding: 0 8px !important;
+      gap: 6px !important;
+      font-size: 0.8rem !important;
+    }
+  }
+
   .mobileToggle {
     display: block;
+    padding: 4px;
   }
 
   .links {

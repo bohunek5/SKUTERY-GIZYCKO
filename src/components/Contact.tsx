@@ -65,13 +65,14 @@ export default function Contact() {
         >
           <div className={styles.mapCard}>
             <iframe 
-              src="https://maps.google.com/maps?q=Port%20Stranda%20Pierkunowo%20Gi%C5%BCycko&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              src="https://maps.google.com/maps?q=Port+Stranda,+Gi%C5%BCycko&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
               allowFullScreen={false} 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
+              className={styles.mapIframe}
             ></iframe>
           </div>
           <div className={styles.photoCard} onClick={() => setIsLightboxOpen(true)}>

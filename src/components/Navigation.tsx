@@ -31,6 +31,14 @@ export default function Navigation() {
           <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
         </div>
 
+        <div className={styles.mobileTopBarControls}>
+          <div className={styles.weatherMini}>
+            <WeatherWidget />
+          </div>
+          <LanguageSwitcher />
+          <ThemeToggle />
+        </div>
+
         <div className={`${styles.links} ${mobileMenuOpen ? styles.open : ''}`}>
           <Link href="/#about" onClick={() => setMobileMenuOpen(false)}>{t('about')}</Link>
           <Link href="/#fleet" onClick={() => setMobileMenuOpen(false)}>{t('fleet')}</Link>
@@ -39,11 +47,6 @@ export default function Navigation() {
           <Link href="/#contact" onClick={() => setMobileMenuOpen(false)}>{t('contact')}</Link>
           
           <div className={styles.mobileActions}>
-            <WeatherWidget />
-            <div className={styles.toggles}>
-              <ThemeToggle />
-              <LanguageSwitcher />
-            </div>
             <Link href="/#contact" className="btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('bookNow')}</Link>
           </div>
         </div>

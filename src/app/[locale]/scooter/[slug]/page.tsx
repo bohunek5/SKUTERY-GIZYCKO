@@ -3,8 +3,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { scootersData } from '@/data/scooters';
 import styles from './page.module.scss';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft, FaPhone } from 'react-icons/fa';
 import { Link } from '@/i18n/routing';
 import ScooterSlider from '@/components/ScooterSlider';
@@ -21,7 +19,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export function generateStaticParams() {
-  return Object.keys(scootersData).map((slug) => ({ slug }));
+  const locales = ['pl', 'en', 'de', 'lt'];
+  const params: any[] = [];
+  locales.forEach((locale) => {
+    Object.keys(scootersData).forEach((slug) => {
+      params.push({ locale, slug });
+    });
+  });
+  return params;
 }
 
 export default async function ScooterPage({ params }: { params: Promise<{ locale: string, slug: string }> }) {
@@ -38,7 +43,6 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
 
   return (
     <main className={styles.main}>
-      <Navigation />
       
       <div className={styles.heroSection}>
         <div className={styles.heroBg}>
@@ -109,8 +113,6 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
           </div>
         </div>
       </div>
-
-      <Footer />
     </main>
   );
 }
