@@ -40,14 +40,14 @@ export default function Navigation() {
         </div>
 
         <div className={`${styles.links} ${mobileMenuOpen ? styles.open : ''}`}>
-          <Link href="/#about" onClick={() => setMobileMenuOpen(false)}>{t('about')}</Link>
-          <Link href="/#fleet" onClick={() => setMobileMenuOpen(false)}>{t('fleet')}</Link>
-          <Link href="/#howItWorks" onClick={() => setMobileMenuOpen(false)}>{t('howItWorks')}</Link>
-          <Link href="/#gallery" onClick={() => setMobileMenuOpen(false)}>{t('gallery')}</Link>
-          <Link href="/#contact" onClick={() => setMobileMenuOpen(false)}>{t('contact')}</Link>
+          <Link href="/o-nas" onClick={() => setMobileMenuOpen(false)}>{t('about')}</Link>
+          <Link href="/sprzet" onClick={() => setMobileMenuOpen(false)}>{t('fleet')}</Link>
+          <Link href="/jak-to-dziala" onClick={() => setMobileMenuOpen(false)}>{t('howItWorks')}</Link>
+          <Link href="/galeria" onClick={() => setMobileMenuOpen(false)}>{t('gallery')}</Link>
+          <Link href="/kontakt" onClick={() => setMobileMenuOpen(false)}>{t('contact')}</Link>
           
           <div className={styles.mobileActions}>
-            <Link href="/#contact" className="btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('bookNow')}</Link>
+            <Link href="/kontakt" className="btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('bookNow')}</Link>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ export default function Navigation() {
           <WeatherWidget />
           <ThemeToggle />
           <LanguageSwitcher />
-          <Link href="/#contact" className="btn-primary">{t('bookNow')}</Link>
+          <Link href="/kontakt" className="btn-primary">{t('bookNow')}</Link>
         </div>
 
         <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle menu">

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import styles from './Footer.module.scss';
 import { FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
@@ -35,10 +36,10 @@ export default function Footer() {
           <div className={styles.col}>
             <h3>{t('quickLinks')}</h3>
             <ul className={styles.linksList}>
-              <li><a href="#home">{useTranslations('Navigation')('home')}</a></li>
-              <li><a href="#about">{useTranslations('Navigation')('about')}</a></li>
-              <li><a href="#fleet">{useTranslations('Navigation')('fleet')}</a></li>
-              <li><a href="#gallery">{useTranslations('Navigation')('gallery')}</a></li>
+              <li><Link href="/">{useTranslations('Navigation')('home')}</Link></li>
+              <li><Link href="/o-nas">{useTranslations('Navigation')('about')}</Link></li>
+              <li><Link href="/sprzet">{useTranslations('Navigation')('fleet')}</Link></li>
+              <li><Link href="/galeria">{useTranslations('Navigation')('gallery')}</Link></li>
             </ul>
           </div>
 
@@ -62,7 +63,7 @@ export default function Footer() {
           </div>
 
           {/* Preferences Column */}
-          <div className={styles.col}>
+          <div className={`${styles.col} ${styles.prefCol}`}>
             <h3>{t('preferences')}</h3>
             <div className={styles.preferences}>
               <div className={styles.prefItem}>

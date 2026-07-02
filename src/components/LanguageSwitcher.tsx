@@ -24,18 +24,19 @@ export default function LanguageSwitcher() {
 
   return (
     <div className={styles.switcher}>
-      <Globe size={18} className={styles.icon} />
-      <select
-        value={locale}
-        onChange={(e) => changeLanguage(e.target.value)}
-        className={styles.select}
-      >
-        {languages.map((lng) => (
-          <option key={lng.code} value={lng.code}>
-            {lng.label}
-          </option>
-        ))}
-      </select>
+      {languages.map((lng) => (
+        <button
+          key={lng.code}
+          onClick={() => changeLanguage(lng.code)}
+          className={`${styles.flagBtn} ${locale === lng.code ? styles.active : ''}`}
+          title={lng.label}
+        >
+          {lng.code === 'pl' && '🇵🇱'}
+          {lng.code === 'en' && '🇬🇧'}
+          {lng.code === 'de' && '🇩🇪'}
+          {lng.code === 'lt' && '🇱🇹'}
+        </button>
+      ))}
     </div>
   );
 }
