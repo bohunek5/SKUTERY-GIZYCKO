@@ -28,8 +28,12 @@ export default function Navigation() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navContainer}`}>
         <div className={styles.logo}>
-          <Link href="/">
-            <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
+          <Link href="/" onClick={(e) => {
+            if (window.location.pathname === '/' || window.location.pathname === '/pl' || window.location.pathname === '/en' || window.location.pathname === '/de' || window.location.pathname === '/lt') {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}>
+            <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" style={{ cursor: 'pointer' }} />
           </Link>
         </div>
 
@@ -46,8 +50,13 @@ export default function Navigation() {
 
         <div className={`${styles.links} ${mobileMenuOpen ? styles.open : ''}`}>
           <div className={styles.mobileMenuLogo}>
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} style={{ display: 'block' }}>
-              <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
+            <Link href="/" onClick={(e) => {
+              setMobileMenuOpen(false);
+              if (window.location.pathname === '/' || window.location.pathname === '/pl' || window.location.pathname === '/en' || window.location.pathname === '/de' || window.location.pathname === '/lt') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }} style={{ display: 'block' }}>
+              <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" style={{ cursor: 'pointer' }} />
             </Link>
           </div>
           <Link href="/o-nas" onClick={() => setMobileMenuOpen(false)}>{t('about')}</Link>
