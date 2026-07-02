@@ -112,7 +112,7 @@
 
   @media (max-width: 992px) {
     position: absolute;
-    top: 20px;
+    top: 110px;
     left: 20px;
     transform: none;
     
@@ -248,7 +248,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -267,20 +267,15 @@
       
       .priceLabel {
         color: var(--text-muted);
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+        margin-bottom: 2px;
       }
       .priceValue {
-        font-size: 1.5rem;
-        font-weight: 800;
+        font-size: 1rem;
+        font-weight: 700;
         color: var(--text-main);
-        
-        span {
-          font-size: 0.9rem;
-          font-weight: 500;
-          color: var(--text-muted);
-        }
       }
     }
     
@@ -288,9 +283,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 14px 28px !important;
-      font-size: 1.1rem !important;
+      gap: 8px;
+      padding: 10px 20px !important;
+      font-size: 1rem !important;
       border-radius: 100px;
       font-weight: 700;
     }

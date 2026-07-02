@@ -87,8 +87,8 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
       {/* MOBILE BOOKING BAR */}
       <div className={styles.mobileBookingBar}>
         <div className={styles.mobilePriceInfo}>
-          <span className={styles.priceLabel}>Wynajem od</span>
-          <div className={styles.priceValue}>{scooter.pricePerHour.replace('zł*', '')} <span>PLN / h</span></div>
+          <span className={styles.priceLabel}>Wynajem: {name}</span>
+          <div className={styles.priceValue}>od {scooter.pricePerHour.replace('*', '')}</div>
         </div>
         <a href="tel:+48507697292" className={`btn-primary ${styles.mobileBookBtn}`}>
           <FaPhone /> Zadzwoń
