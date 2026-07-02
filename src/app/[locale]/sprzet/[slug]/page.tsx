@@ -6,6 +6,7 @@ import styles from './page.module.scss';
 import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft, FaPhone, FaArrowDown } from 'react-icons/fa';
 import { Link } from '@/i18n/routing';
 import ClientImageGallery from '@/components/ClientImageGallery';
+import ScrollDownBtn from '@/components/ScrollDownBtn';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string, slug: string }> }) {
   const { locale, slug } = await params;
@@ -97,21 +98,10 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
             </div>
           </div>
           
-          <button 
+          <ScrollDownBtn 
             className={styles.scrollDownBtn} 
-            onClick={(e) => {
-              const section = (e.currentTarget as HTMLElement).closest(`.${styles.heroSection}`);
-              const nextSibling = section?.nextElementSibling;
-              if (nextSibling) {
-                nextSibling.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-              }
-            }}
-            aria-label="Przewiń w dół"
-          >
-            <FaArrowDown />
-          </button>
+            targetSelector={`.${styles.heroSection}`}
+          />
         </div>
       </div>
 
