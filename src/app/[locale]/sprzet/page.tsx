@@ -21,7 +21,7 @@ export default async function SprzetPage({ params }: { params: Promise<{ locale:
       <Hero 
         title="Sprzęt" 
         subtitle="Nasza oferta" 
-        videoSrc="/SKUTERY-GIZYCKO/videos/oferta.mp4#t=2"
+        videoSrc="/SKUTERY-GIZYCKO/videos/oferta.mp4"
         showArrowDown={true}
       />
 

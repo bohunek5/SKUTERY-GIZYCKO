@@ -11,7 +11,7 @@ export default async function HowItWorksPage({ params }: { params: Promise<{ loc
       <Hero 
         title="Jak to działa?" 
         subtitle="Proces wynajmu krok po kroku. To prostsze niż myślisz!" 
-        videoSrc="/SKUTERY-GIZYCKO/videos/jak-to-dziala.mp4#t=2" 
+        videoSrc="/SKUTERY-GIZYCKO/videos/jak-to-dziala.mp4" 
         showArrowDown={true}
       />
       <div style={{ paddingBottom: '80px', position: 'relative', zIndex: 10 }}>

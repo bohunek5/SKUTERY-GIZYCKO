@@ -15,7 +15,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Hero 
         title={t('title')} 
         subtitle={t('subtitle')} 
-        videoSrc="/SKUTERY-GIZYCKO/videos/hero.mp4#t=2"
+        videoSrc="/SKUTERY-GIZYCKO/videos/hero.mp4"
         showArrowDown={true}
       />
       <Fleet />
