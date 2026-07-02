@@ -13,6 +13,13 @@
   transition: all 0.3s ease;
   height: 40px;
 
+  @media (max-width: 768px) {
+    padding: 4px 8px;
+    height: 34px;
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
   &.compactWidget {
     padding: 4px 8px;
     gap: 6px;
