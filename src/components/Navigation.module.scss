@@ -155,19 +155,24 @@
   .mobileTopBarControls {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     margin-left: auto;
-    margin-right: 12px;
+    margin-right: 8px;
+    transform: scale(0.9);
+    transform-origin: right center;
   }
 
   .weatherMini {
-    transform: scale(0.85);
+    transform: scale(0.7);
     transform-origin: right center;
+    margin-right: -15px; /* offset the visual gap caused by scale */
   }
 
   .mobileToggle {
     display: block;
     padding: 4px;
+    flex-shrink: 0;
+    z-index: 1005;
   }
 
   .mobileMenuLogo {

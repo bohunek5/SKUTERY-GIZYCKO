@@ -4,8 +4,6 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import styles from './Footer.module.scss';
 import { FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import ThemeToggle from './ThemeToggle';
-import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -62,19 +60,16 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Preferences Column */}
-          <div className={`${styles.col} ${styles.prefCol}`}>
-            <h3>{t('preferences')}</h3>
-            <div className={styles.preferences}>
-              <div className={styles.prefItem}>
-                <span>{t('theme')}</span>
-                <ThemeToggle />
-              </div>
-              <div className={styles.prefItem}>
-                <span>{t('language')}</span>
-                <LanguageSwitcher />
-              </div>
-            </div>
+          {/* Places to see */}
+          <div className={styles.col}>
+            <h3>Warto zobaczyć z wody</h3>
+            <ul className={styles.linksList}>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Port Stranda (baza)</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Kanał Giżycki (Łuczański)</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Wyspa Miłości (Niegocin)</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Szlak Łabędzi (Kisajno)</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Twierdza Boyen (z wody)</a></li>
+            </ul>
           </div>
         </div>
 
