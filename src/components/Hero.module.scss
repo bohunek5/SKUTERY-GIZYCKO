@@ -45,7 +45,7 @@
   pointer-events: none;
 
   @media (max-width: 768px) {
-    object-position: 75% center; /* Przesunięcie w prawo na mobile */
+    object-position: center; /* Wypośrodkowanie na mobile */
   }
 }
 
