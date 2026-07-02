@@ -11,7 +11,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     <main style={{ minHeight: '100vh', background: 'var(--bg-base)' }}>
       <Hero 
         title={t('title')} 
-        subtitle={t('subtitle')} 
         videoSrc="/SKUTERY-GIZYCKO/videos/o-nas.mp4" 
         compact={true}
         showArrowDown={true}
