@@ -139,7 +139,7 @@
     border-radius: 12px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    white-space: nowrap;
+    white-space: normal;
 
     @media (max-width: 640px) {
       font-size: 0.95rem;
@@ -287,7 +287,7 @@
 
 .fullSpecsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
   gap: 12px;
   margin-bottom: 50px;
 
@@ -415,6 +415,7 @@
   gap: 16px;
   overflow-x: auto;
   padding-bottom: 12px;
+  max-width: 100%;
   -webkit-overflow-scrolling: touch;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
