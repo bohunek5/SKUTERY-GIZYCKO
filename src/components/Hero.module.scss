@@ -16,8 +16,8 @@
 }
 
 .compact {
-  height: 60vh !important;
-  min-height: 400px !important;
+  height: 100vh !important;
+  min-height: 700px !important;
 
   @media (max-width: 992px) {
     height: 100vh !important;
@@ -36,6 +36,16 @@
   z-index: 1;
   overflow: hidden;
   pointer-events: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* PRO Blue water color grading filter */
+    background: linear-gradient(to bottom, rgba(0, 162, 255, 0.15) 0%, rgba(0, 85, 255, 0.25) 100%);
+    mix-blend-mode: color;
+    z-index: 2;
+  }
 }
 
 .videoBackground {
@@ -43,6 +53,7 @@
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  filter: contrast(1.15) saturate(1.2); /* Make colors pop */
 
   @media (max-width: 768px) {
     object-position: center; /* Wypośrodkowanie na mobile */
