@@ -51,9 +51,9 @@ export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, comp
             muted
             playsInline
             className={styles.videoBackground}
-            poster={finalVideoSrc.replace('.mp4', '.png')}
+            poster={finalVideoSrc.split('?')[0].replace('.mp4', '.png').replace('.mov', '.png') + (finalVideoSrc.includes('?') ? '?' + finalVideoSrc.split('?')[1] : '')}
           >
-            <source src={finalVideoSrc} type="video/mp4" />
+            <source src={finalVideoSrc} type={finalVideoSrc.includes('.mov') ? 'video/quicktime' : 'video/mp4'} />
           </video>
         </div>
       )}
