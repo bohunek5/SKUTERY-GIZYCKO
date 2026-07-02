@@ -43,7 +43,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4>{t('addressTitle')}</h4>
-                <p>{t('address')}</p>
+                <p><a href="https://maps.google.com/?q=Pierkunowo+36,+11-500+Giżycko" target="_blank" rel="noopener noreferrer">{t('address')}</a></p>
               </div>
             </div>
 

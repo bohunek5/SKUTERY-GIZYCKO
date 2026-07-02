@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import styles from "./ThemeToggle.module.scss";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ compact = false }: { compact?: boolean }) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -15,16 +15,16 @@ export default function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return <div className={styles.placeholder}></div>;
+    return <div className={`${styles.placeholder} ${compact ? styles.compactPlaceholder : ''}`}></div>;
   }
 
   return (
     <button
-      className={styles.toggleBtn}
+      className={`${styles.toggleBtn} ${compact ? styles.compactToggle : ''}`}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle Theme"
     >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      {theme === "dark" ? <Sun size={compact ? 18 : 20} /> : <Moon size={compact ? 18 : 20} />}
     </button>
   );
 }

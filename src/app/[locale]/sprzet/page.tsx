@@ -18,7 +18,7 @@ export default async function SprzetPage({ params }: { params: Promise<{ locale:
     <main className={styles.main}>
       <div className={styles.heroSection}>
         <div className={styles.videoWrapper}>
-          <video autoPlay muted loop playsInline className={styles.videoBackground}>
+          <video autoPlay muted loop playsInline className={styles.videoBackground} poster="/SKUTERY-GIZYCKO/videos/oferta.png">
             <source src="/SKUTERY-GIZYCKO/videos/oferta.mp4" type="video/mp4" />
           </video>
           <div className={styles.overlay}></div>

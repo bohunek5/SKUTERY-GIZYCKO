@@ -12,7 +12,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
       <Hero 
         title={t('title')} 
         subtitle={t('subtitle')} 
-        videoSrc="/SKUTERY-GIZYCKO/videos/jetski.mp4" 
+        videoSrc="/SKUTERY-GIZYCKO/videos/galeria.mp4" 
         compact={true}
         showArrowDown={true}
       />

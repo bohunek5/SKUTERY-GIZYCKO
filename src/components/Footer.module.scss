@@ -40,11 +40,25 @@
   }
 }
 
+.leftCol {
+  text-align: left;
+  .contactList li {
+    justify-content: flex-start;
+  }
+}
+
 .centeredCol {
   text-align: center;
   
   .contactList li {
     justify-content: center;
+  }
+}
+
+.rightCol {
+  text-align: right;
+  .linksList li {
+    justify-content: flex-end;
   }
 }
 
@@ -146,6 +160,7 @@
     
     @media (max-width: 640px) {
       justify-content: center;
+      white-space: nowrap;
     }
 
     a {

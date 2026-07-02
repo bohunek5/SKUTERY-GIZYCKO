@@ -12,7 +12,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <Hero 
         title={t('title')} 
         subtitle={t('subtitle')} 
-        videoSrc="/SKUTERY-GIZYCKO/videos/kontakt-hero.mp4" 
+        videoSrc="/SKUTERY-GIZYCKO/videos/kontakt.mp4" 
         compact={true}
         showArrowDown={true}
       />

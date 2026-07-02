@@ -14,9 +14,18 @@
     background-color: var(--glass-border);
     color: var(--primary-color);
   }
+
+  &.compactToggle {
+    padding: 6px;
+  }
 }
 
 .placeholder {
   width: 36px;
   height: 36px;
+
+  &.compactPlaceholder {
+    width: 30px;
+    height: 30px;
+  }
 }

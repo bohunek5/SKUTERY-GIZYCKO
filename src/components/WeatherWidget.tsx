@@ -12,7 +12,7 @@ interface WeatherData {
   windDir: number;
 }
 
-export default function WeatherWidget() {
+export default function WeatherWidget({ compact = false }: { compact?: boolean }) {
   const [mounted, setMounted] = useState(false);
   const [data, setData] = useState<WeatherData | null>(null);
 
@@ -47,15 +47,15 @@ export default function WeatherWidget() {
 
 
   const getConditionIcon = (code: number) => {
-    if (code === 0 || code === 1) return <Sun className={styles.iconSun} size={24} />;
-    if (code >= 51 && code <= 99) return <CloudRain className={styles.iconRain} size={24} />;
-    return <Cloud className={styles.iconCloud} size={24} />;
+    if (code === 0 || code === 1) return <Sun className={styles.iconSun} size={compact ? 20 : 24} />;
+    if (code >= 51 && code <= 99) return <CloudRain className={styles.iconRain} size={compact ? 20 : 24} />;
+    return <Cloud className={styles.iconCloud} size={compact ? 20 : 24} />;
   };
 
   if (!data) {
     return (
-      <div className={styles.widget}>
-        <Loader2 className={styles.spinner} size={20} />
+      <div className={`${styles.widget} ${compact ? styles.compactWidget : ''}`}>
+        <Loader2 className={styles.spinner} size={compact ? 16 : 20} />
       </div>
     );
   }
@@ -64,30 +64,32 @@ export default function WeatherWidget() {
   const isHighWind = data.windSpeed > 20;
 
   return (
-    <div className={styles.widget}>
+    <div className={`${styles.widget} ${compact ? styles.compactWidget : ''}`}>
       <div className={styles.iconContainer}>
         {getConditionIcon(data.conditionCode)}
       </div>
-      <div className={styles.info}>
+      <div className={styles.info} style={compact ? { borderRight: 'none', paddingRight: 0 } : {}}>
         <span className={styles.temp}>{data.temp}°C</span>
       </div>
       
-      <div className={styles.windContainer}>
-        <Wind 
-          className={`${styles.windIcon} ${isHighWind ? styles.fastSpin : styles.slowSpin}`} 
-          size={18} 
-        />
-        <div className={styles.windInfo}>
-          <span className={styles.windSpeed}>{data.windSpeed} km/h</span>
+      {!compact && (
+        <div className={styles.windContainer}>
+          <Wind 
+            className={`${styles.windIcon} ${isHighWind ? styles.fastSpin : styles.slowSpin}`} 
+            size={18} 
+          />
+          <div className={styles.windInfo}>
+            <span className={styles.windSpeed}>{data.windSpeed} km/h</span>
+          </div>
+          <div 
+            className={styles.windDirection} 
+            style={{ transform: `rotate(${data.windDir}deg)` }}
+            title={`Kierunek wiatru: ${data.windDir}°`}
+          >
+            ↑
+          </div>
         </div>
-        <div 
-          className={styles.windDirection} 
-          style={{ transform: `rotate(${data.windDir}deg)` }}
-          title={`Kierunek wiatru: ${data.windDir}°`}
-        >
-          ↑
-        </div>
-      </div>
+      )}
     </div>
   );
 }

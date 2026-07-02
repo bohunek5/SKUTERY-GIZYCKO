@@ -31,12 +31,12 @@ export default function Footer() {
           </div>
 
           {/* Contact Column */}
-          <div className={`${styles.col} ${styles.centeredCol}`}>
+          <div className={`${styles.col} ${styles.leftCol}`}>
             <h3>{t('contactUs')}</h3>
             <ul className={styles.contactList}>
               <li>
                 <FaMapMarkerAlt className={styles.contactIcon} />
-                <span>{tContact('address')}</span>
+                <span><a href="https://maps.google.com/?q=Pierkunowo+36,+11-500+Giżycko" target="_blank" rel="noopener noreferrer">{tContact('address')}</a></span>
               </li>
               <li>
                 <FaPhoneAlt className={styles.contactIcon} />
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           {/* Places to see */}
-          <div className={`${styles.col} ${styles.centeredCol}`}>
+          <div className={`${styles.col} ${styles.rightCol}`}>
             <h3>Zobacz z wody</h3>
             <ul className={styles.linksList}>
               <li><a href="https://www.google.com/maps/search/?api=1&query=Port+Stranda+Giżycko" target="_blank" rel="noopener noreferrer">Port Stranda (baza)</a></li>

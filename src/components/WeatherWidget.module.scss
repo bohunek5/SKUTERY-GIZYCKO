@@ -13,6 +13,13 @@
   transition: all 0.3s ease;
   height: 40px;
 
+  &.compactWidget {
+    padding: 4px 8px;
+    gap: 6px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+
   :global([data-theme='light']) & {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(241, 245, 249, 0.95));
     border: 1px solid rgba(56, 189, 248, 0.3);

@@ -16,6 +16,11 @@
   cursor: pointer;
   transition: all 0.2s ease;
 
+  &.compactToggle {
+    padding: 4px 6px;
+    height: 36px;
+  }
+
   :global([data-theme='light']) & {
     background: rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);

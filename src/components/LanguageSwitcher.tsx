@@ -6,7 +6,7 @@ import styles from './LanguageSwitcher.module.scss';
 import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-export default function LanguageSwitcher({ variant = 'responsive' }: { variant?: 'dropdown' | 'row' | 'responsive' }) {
+export default function LanguageSwitcher({ variant = 'responsive', compact = false }: { variant?: 'dropdown' | 'row' | 'responsive', compact?: boolean }) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -38,9 +38,9 @@ export default function LanguageSwitcher({ variant = 'responsive' }: { variant?:
   const activeLang = languages.find(l => l.code === locale) || languages[0];
 
   return (
-    <div className={`${styles.switcher} ${styles[variant]}`} ref={dropdownRef}>
+    <div className={`${styles.switcher} ${styles[variant]} ${compact ? styles.compactSwitcher : ''}`} ref={dropdownRef}>
       <button 
-        className={`${styles.flagBtn} ${styles.active} ${styles.dropdownToggle}`} 
+        className={`${styles.flagBtn} ${styles.active} ${styles.dropdownToggle} ${compact ? styles.compactToggle : ''}`} 
         onClick={() => setIsOpen(!isOpen)}
         title={activeLang.label}
         style={{ border: 'none', background: 'transparent' }}
@@ -48,9 +48,9 @@ export default function LanguageSwitcher({ variant = 'responsive' }: { variant?:
         <img 
           src={`https://flagcdn.com/w40/${activeLang.flag}.png`} 
           alt={activeLang.label}
-          style={{ width: '24px', height: '16px', borderRadius: '2px', display: 'block' }} 
+          style={{ width: compact ? '20px' : '24px', height: compact ? '14px' : '16px', borderRadius: '2px', display: 'block' }} 
         />
-        <ChevronDown className={`${styles.chevron} ${isOpen ? styles.open : ''}`} size={16} />
+        <ChevronDown className={`${styles.chevron} ${isOpen ? styles.open : ''}`} size={compact ? 14 : 16} />
       </button>
 
       <div className={`${styles.dropdown} ${isOpen ? styles.open : ''}`}>
