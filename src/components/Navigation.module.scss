@@ -144,6 +144,7 @@
     height: 70px;
     padding: 0 16px;
     border-radius: 100px;
+    position: relative;
   }
 
   .logo img {
@@ -162,7 +163,7 @@
     justify-content: flex-end;
     flex: 1;
     gap: 8px;
-    margin: 0 8px 0 auto;
+    margin: 0 45px 0 auto; /* Extra margin on right for the absolute hamburger */
     
     /* Scale down slightly on very small screens to fit Weather + Theme + Lang */
     @media (max-width: 390px) {
@@ -176,10 +177,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4px;
+    padding: 8px;
     margin: 0;
     flex-shrink: 0;
     z-index: 1005;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .mobileMenuLogo {
@@ -233,11 +238,11 @@
     }
     
     a:not(.btn-primary) {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       font-weight: 500;
       width: 100%;
       text-align: center;
-      padding: 10px 0;
+      padding: 12px 0;
       border: none;
       letter-spacing: 0.5px;
 
