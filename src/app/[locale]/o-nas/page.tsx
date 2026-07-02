@@ -13,7 +13,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         title={t('title')} 
         subtitle={t('subtitle')} 
         videoSrc="/SKUTERY-GIZYCKO/videos/o-nas.mp4" 
-        compact={true}
         showArrowDown={true}
       />
       <div style={{ marginTop: '-60px', paddingBottom: '80px', position: 'relative', zIndex: 10 }}>

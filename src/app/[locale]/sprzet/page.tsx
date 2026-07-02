@@ -22,7 +22,6 @@ export default async function SprzetPage({ params }: { params: Promise<{ locale:
         title="Sprzęt" 
         subtitle="Nasza oferta" 
         videoSrc="/SKUTERY-GIZYCKO/videos/oferta.mp4" 
-        compact={true}
         showArrowDown={true}
       />
 

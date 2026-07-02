@@ -13,7 +13,6 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
         title={t('title')} 
         subtitle={t('subtitle')} 
         videoSrc="/SKUTERY-GIZYCKO/videos/galeria.mp4" 
-        compact={true}
         showArrowDown={true}
       />
       <div style={{ marginTop: '-60px', paddingBottom: '80px', position: 'relative', zIndex: 10 }}>
