@@ -9,16 +9,13 @@
 /* 1. HERO SECTION */
 .heroLayout {
   display: flex;
-  height: 100vh;
-  min-height: 800px;
+  height: auto;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
   background: #020617; /* Dark base for hero */
 
   @media (max-width: 992px) {
     flex-direction: column-reverse;
-    min-height: 100dvh;
-    height: 100dvh;
   }
 }
 
@@ -26,8 +23,8 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 140px 5vw 80px 5vw;
+  justify-content: flex-start;
+  padding: 120px 5vw 80px 5vw;
   position: relative;
   z-index: 10;
   max-width: 600px;
@@ -85,11 +82,8 @@
 .backBtn {
   display: inline-flex;
   align-items: center;
-  position: absolute;
-  top: 110px; /* Below the navbar */
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 0;
+  align-self: flex-start;
+  margin-bottom: 40px;
   gap: 8px;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
@@ -107,14 +101,15 @@
   &:hover {
     background: var(--primary);
     border-color: var(--primary);
-    transform: translateX(-50%) translateY(-5px);
+    transform: translateY(-5px);
   }
 
   @media (max-width: 992px) {
     position: absolute;
     top: 20px;
     left: 20px;
-    transform: none;
+    align-self: auto;
+    margin-bottom: 0;
     
     &:hover {
       transform: translateX(-5px);
