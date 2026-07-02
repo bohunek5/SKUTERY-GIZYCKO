@@ -15,7 +15,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Hero 
         title={t('title')} 
         subtitle={t('subtitle')} 
-        imageSrc="https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg"
+        videoSrc="/SKUTERY-GIZYCKO/videos/hero.mp4"
         showArrowDown={true}
       />
       <Fleet />
