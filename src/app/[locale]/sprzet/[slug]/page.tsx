@@ -60,7 +60,6 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
             <div className={styles.titleWrapper}>
               <span className={styles.typeBadge}>{type}</span>
               <h1>{name}</h1>
-              <p className={styles.heroShortDesc}>{scooter.description}</p>
               
               <div className={styles.heroQuickSpecs}>
                 <div className={styles.quickSpec}>
@@ -116,6 +115,10 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
       </div>
 
       <div className={`container ${styles.contentSection}`}>
+        
+        <div className={styles.scooterDescriptionBlock}>
+          <p>{scooter.description}</p>
+        </div>
         
         <h2 className={styles.sectionTitle}>Specyfikacja techniczna</h2>
         <div className={styles.fullSpecsGrid}>

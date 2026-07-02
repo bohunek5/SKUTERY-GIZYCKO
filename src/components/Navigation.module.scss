@@ -144,14 +144,14 @@
   }
   
   .navContainer {
-    height: 70px;
-    padding: 0 16px;
-    border-radius: 20px;
+    height: 60px;
+    padding: 0 12px;
+    border-radius: 100px;
   }
 
   .logo img {
-    height: 40px;
-    max-width: 140px;
+    height: 32px;
+    max-width: 110px;
     object-fit: contain;
   }
 
@@ -162,25 +162,24 @@
   .centerWidgets {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex: 1;
-    gap: 8px;
-    margin: 0 4px;
-    /* Scale down slightly on very small screens to fit Weather + Theme + Lang */
+    gap: 4px;
+    margin: 0;
+    
     @media (max-width: 390px) {
-      transform: scale(0.75);
-      transform-origin: center;
-      gap: 4px;
+      transform: scale(0.85);
+      transform-origin: right center;
     }
   }
 
   .mobileToggle {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
-    margin: 0;
-    margin-left: 8px;
+    padding: 4px;
+    margin: 0 0 0 4px;
     flex-shrink: 0;
     z-index: 1005;
   }
@@ -200,28 +199,26 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
     height: 100dvh;
     border-radius: 0;
-    /* Water theme - Night */
-    background: linear-gradient(180deg, rgba(4, 21, 40, 0.98) 0%, rgba(1, 10, 20, 0.99) 100%);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    /* Clean, elegant water theme - Night */
+    background: rgba(4, 15, 30, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border: none;
     box-shadow: none;
     
     :global([data-theme='light']) & {
-      /* Water theme - Day */
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(224, 242, 254, 0.98) 100%);
+      /* Clean, elegant water theme - Day */
+      background: rgba(240, 248, 255, 0.98);
       border: none;
-      box-shadow: none;
     }
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     padding: 0 20px;
     
     opacity: 0;
@@ -238,25 +235,21 @@
     }
     
     a:not(.btn-primary) {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-weight: 500;
       width: 100%;
       text-align: center;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 10px 0;
+      border: none;
+      letter-spacing: 0.5px;
 
       :global([data-theme='light']) & {
-        border-bottom: 1px solid rgba(14, 165, 233, 0.1);
-        color: #0369a1; /* Ocean blue */
+        color: #0284c7; /* Ocean blue */
       }
 
       &::after {
         display: none;
       }
-    }
-
-    a:not(.btn-primary):last-of-type {
-      border-bottom: none;
     }
   }
 
