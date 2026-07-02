@@ -25,7 +25,12 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
   
   return {
     title: t('title') + ' | Jet Ski Rental Maciej Skwarko',
-    description: t('subtitle')
+    description: t('subtitle'),
+    icons: {
+      icon: [
+        { url: '/SKUTERY-GIZYCKO/assets/skutery-logo.svg', type: 'image/svg+xml' }
+      ]
+    }
   };
 }
 
