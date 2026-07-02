@@ -35,16 +35,8 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240706_105325-scaled.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20210211_181101.jpg',
     gallery: [
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240706_105325-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150955-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150824-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150810-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240630_105901-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240621_185024-scaled.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_163011.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_162309.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20210211_181101.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20200709-WA0006.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2021/02/IMG-20200709-WA0018.jpg',
@@ -70,8 +62,9 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240621_185024-scaled.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2024/08/1.jpg',
     gallery: [
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/1.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240621_185024-scaled.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240630_105901-scaled.jpg',
       'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150810-scaled.jpg',
