@@ -76,8 +76,8 @@ export default function Hero({ title, subtitle, videoSrc, imageSrc, posterSrc, c
   const finalSubtitle = subtitle || t('subtitle');
   // Use image by default instead of heavy 86MB video to prevent mobile lag
   const finalImageSrc = imageSrc || (!videoSrc ? "https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg" : undefined);
-  // Default poster for the main hero video to hide loading stutter
-  const finalPosterSrc = posterSrc || (videoSrc?.includes('hero') ? "https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg" : undefined);
+  // Removed hardcoded old image poster
+  const finalPosterSrc = posterSrc;
   const finalCtaText = ctaText || t('cta');
   const finalCtaLink = ctaLink || "/kontakt";
 
@@ -93,7 +93,7 @@ export default function Hero({ title, subtitle, videoSrc, imageSrc, posterSrc, c
             playsInline
             preload="auto"
             className={styles.videoBackground}
-            poster={finalPosterSrc || (videoSrc.split('?')[0].replace('.mp4', '.png').replace('.mov', '.png') + (videoSrc.includes('?') ? '?' + videoSrc.split('?')[1] : ''))}
+            poster={finalPosterSrc}
           >
             <source src={videoSrc} type={videoSrc.includes('.mov') ? 'video/quicktime' : 'video/mp4'} />
           </video>

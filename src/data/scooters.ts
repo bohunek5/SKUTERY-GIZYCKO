@@ -147,10 +147,10 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505-2.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg',
     gallery: [
-      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505-2.jpg',
-      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505-2.jpg'
     ]
   },
   'lodz-quicksilver-675': {
