@@ -76,8 +76,9 @@ export default function Hero({ title, subtitle, videoSrc, imageSrc, posterSrc, c
   const finalSubtitle = subtitle || t('subtitle');
   // Use image by default instead of heavy 86MB video to prevent mobile lag
   const finalImageSrc = imageSrc || (!videoSrc ? "https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg" : undefined);
-  // Removed hardcoded old image poster
-  const finalPosterSrc = posterSrc;
+  // Re-enable dynamically generated posters for all videos to prevent iOS missing-play-icon bug
+  const generatedPoster = videoSrc ? videoSrc.split('?')[0].replace('.mp4', '.png').replace('.mov', '.png') + (videoSrc.includes('?') ? '?' + videoSrc.split('?')[1] : '') : undefined;
+  const finalPosterSrc = posterSrc || generatedPoster;
   const finalCtaText = ctaText || t('cta');
   const finalCtaLink = ctaLink || "/kontakt";
 
