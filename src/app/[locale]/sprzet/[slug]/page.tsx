@@ -102,41 +102,66 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
         <section className={styles.specsSection}>
           <h2 className={styles.sectionTitle}>Specyfikacja techniczna</h2>
           <div className={styles.bentoGrid}>
-            <div className={`${styles.bentoCard} ${styles.bentoPrimary}`}>
-              <FaTachometerAlt className={styles.bentoIcon} />
-              <div className={styles.bentoContent}>
-                <span className={styles.bentoLabel}>Moc silnika</span>
-                <span className={styles.bentoValue}>{scooter.horsepower}</span>
+            {scooter.horsepower && (
+              <div className={`${styles.bentoCard} ${styles.bentoPrimary}`}>
+                <FaTachometerAlt className={styles.bentoIcon} />
+                <div className={styles.bentoContent}>
+                  <span className={styles.bentoLabel}>Silnik / Moc</span>
+                  <span className={styles.bentoValue}>{scooter.horsepower}</span>
+                </div>
               </div>
-            </div>
-            <div className={styles.bentoCard}>
-              <FaUsers className={styles.bentoIcon} />
-              <div className={styles.bentoContent}>
-                <span className={styles.bentoLabel}>Pojemność</span>
-                <span className={styles.bentoValue}>{scooter.capacity}</span>
+            )}
+            
+            {scooter.capacity && (
+              <div className={styles.bentoCard}>
+                <FaUsers className={styles.bentoIcon} />
+                <div className={styles.bentoContent}>
+                  <span className={styles.bentoLabel}>Pojemność</span>
+                  <span className={styles.bentoValue}>{scooter.capacity}</span>
+                </div>
               </div>
-            </div>
-            <div className={styles.bentoCard}>
-              <FaTachometerAlt className={styles.bentoIcon} />
-              <div className={styles.bentoContent}>
-                <span className={styles.bentoLabel}>V-Max</span>
-                <span className={styles.bentoValue}>{scooter.maxSpeed}</span>
+            )}
+            
+            {scooter.maxSpeed && (
+              <div className={styles.bentoCard}>
+                <FaTachometerAlt className={styles.bentoIcon} />
+                <div className={styles.bentoContent}>
+                  <span className={styles.bentoLabel}>V-Max</span>
+                  <span className={styles.bentoValue}>{scooter.maxSpeed}</span>
+                </div>
               </div>
-            </div>
-            <div className={styles.bentoCard}>
-              <FaWeightHanging className={styles.bentoIcon} />
-              <div className={styles.bentoContent}>
-                <span className={styles.bentoLabel}>Waga</span>
-                <span className={styles.bentoValue}>{scooter.weight}</span>
+            )}
+            
+            {scooter.weight && (
+              <div className={styles.bentoCard}>
+                <FaWeightHanging className={styles.bentoIcon} />
+                <div className={styles.bentoContent}>
+                  <span className={styles.bentoLabel}>Waga</span>
+                  <span className={styles.bentoValue}>{scooter.weight}</span>
+                </div>
               </div>
-            </div>
-            <div className={styles.bentoCard}>
-              <FaArrowsAltH className={styles.bentoIcon} />
-              <div className={styles.bentoContent}>
-                <span className={styles.bentoLabel}>Długość</span>
-                <span className={styles.bentoValue}>{scooter.length}</span>
+            )}
+            
+            {scooter.length && (
+              <div className={styles.bentoCard}>
+                <FaArrowsAltH className={styles.bentoIcon} />
+                <div className={styles.bentoContent}>
+                  <span className={styles.bentoLabel}>Długość</span>
+                  <span className={styles.bentoValue}>{scooter.length}</span>
+                </div>
               </div>
-            </div>
+            )}
+
+            {scooter.width && (
+              <div className={styles.bentoCard}>
+                <FaArrowsAltH className={styles.bentoIcon} />
+                <div className={styles.bentoContent}>
+                  <span className={styles.bentoLabel}>Szerokość</span>
+                  <span className={styles.bentoValue}>{scooter.width}</span>
+                </div>
+              </div>
+            )}
+
             {scooter.fuelTank && (
               <div className={styles.bentoCard}>
                 <FaGasPump className={styles.bentoIcon} />
@@ -149,7 +174,22 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
           </div>
         </section>
 
-        {/* 3. RULES */}
+        {/* 3. EQUIPMENT */}
+        {scooter.equipment && scooter.equipment.length > 0 && (
+          <section className={styles.equipmentSection}>
+            <h2 className={styles.sectionTitle}>Wyposażenie</h2>
+            <div className={styles.equipmentGrid}>
+              {scooter.equipment.map((item, idx) => (
+                <div key={idx} className={styles.equipmentItem}>
+                  <FaCheckCircle className={styles.checkIcon} />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* 4. RULES */}
         {scooter.rules && scooter.rules.length > 0 && (
           <section className={styles.rulesSection}>
             <h2 className={styles.sectionTitle}>Ważne informacje</h2>

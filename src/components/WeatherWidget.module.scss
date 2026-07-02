@@ -14,9 +14,9 @@
   height: 40px;
 
   @media (max-width: 768px) {
-    padding: 4px 8px;
-    height: 34px;
-    font-size: 0.8rem;
+    padding: 3px 10px;
+    height: 30px;
+    font-size: 0.72rem;
     gap: 8px;
   }
 
@@ -112,6 +112,7 @@
 
 .windSpeed {
   font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 .windDirection {
