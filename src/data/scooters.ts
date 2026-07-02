@@ -35,12 +35,12 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/SKUTERY-GIZYCKO/assets/20210211_181101.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150810-scaled.jpg',
     gallery: [
-      '/SKUTERY-GIZYCKO/assets/20210211_181101.jpg',
-      '/SKUTERY-GIZYCKO/assets/20210211_181212.jpg',
-      '/SKUTERY-GIZYCKO/assets/20190805_200721-scaled.jpg',
-      '/SKUTERY-GIZYCKO/assets/20200611_205511-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150810-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150824-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240705_150955-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20240706_105325-scaled.jpg'
     ]
   },
   'yamaha-vx-2': {
@@ -62,12 +62,11 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/SKUTERY-GIZYCKO/assets/vx4.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx2.jpg',
     gallery: [
-      '/SKUTERY-GIZYCKO/assets/vx4.jpg',
-      '/SKUTERY-GIZYCKO/assets/IMG-20190819-WA0005.jpg',
-      '/SKUTERY-GIZYCKO/assets/IMG-20200920-WA0004-1024x768.jpg',
-      '/SKUTERY-GIZYCKO/assets/20200611_211053-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx2.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx3.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vx4.jpg'
     ]
   },
   'honda-aquatrax': {
@@ -89,11 +88,12 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/SKUTERY-GIZYCKO/assets/1-1024x719.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg',
     gallery: [
-      '/SKUTERY-GIZYCKO/assets/1-1024x719.jpg',
-      '/SKUTERY-GIZYCKO/assets/20240528_122225-scaled.jpg',
-      '/SKUTERY-GIZYCKO/assets/20240528_122529-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200630_204451-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200626_220330-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200626_204508-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2021/02/20200625_204518-scaled.jpg'
     ]
   },
   'yamaha-vx-180km': {
@@ -115,12 +115,11 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/SKUTERY-GIZYCKO/assets/IMG-20200809-WA0018.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vr1.jpg',
     gallery: [
-      '/SKUTERY-GIZYCKO/assets/IMG-20200809-WA0018.jpg',
-      '/SKUTERY-GIZYCKO/assets/20240601_182330-scaled.jpg',
-      '/SKUTERY-GIZYCKO/assets/20240601_182339-scaled.jpg',
-      '/SKUTERY-GIZYCKO/assets/20240601_182359-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/vr1.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_163011-1-scaled.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/08/20230910_162309-1-scaled.jpg'
     ]
   },
   'lodz-quicksilver-505-open': {
@@ -141,11 +140,11 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/SKUTERY-GIZYCKO/assets/q1.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg',
     gallery: [
-      '/SKUTERY-GIZYCKO/assets/q1.jpg',
-      '/SKUTERY-GIZYCKO/assets/20240601_185516-scaled.jpg',
-      '/SKUTERY-GIZYCKO/assets/20240630_105901-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/quicksilver505-2.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/q1.jpg'
     ]
   },
   'lodz-quicksilver-675': {
@@ -166,11 +165,13 @@ export const scootersData: Record<string, ScooterSpec> = {
       'Płatność za czarter: 40% przy rezerwacji, 60% przed wypłynięciem',
       'Przed wypłynięciem udzielany jest instruktaż obsługi wynajmowanego sprzętu oraz zachowania bezpieczeństwa'
     ],
-    mainImage: '/SKUTERY-GIZYCKO/assets/q2.jpg',
+    mainImage: 'https://skutery-gizycko.pl/wp-content/uploads/2025/04/q2.jpg',
     gallery: [
-      '/SKUTERY-GIZYCKO/assets/q2.jpg',
-      '/SKUTERY-GIZYCKO/assets/20240705_150810-scaled.jpg',
-      '/SKUTERY-GIZYCKO/assets/slid2-scaled.jpg'
+      'https://skutery-gizycko.pl/wp-content/uploads/2025/04/q2.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/07/IMG-20240508-WA0051.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/07/IMG-20240510-WA0005.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/07/Screenshot_20240715_120347_OLXpl.jpg',
+      'https://skutery-gizycko.pl/wp-content/uploads/2024/07/Screenshot_20240715_120350_OLXpl.jpg'
     ]
   }
 };

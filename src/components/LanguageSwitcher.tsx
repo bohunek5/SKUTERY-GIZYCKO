@@ -29,10 +29,10 @@ export default function LanguageSwitcher({ variant = 'responsive' }: { variant?:
   }, []);
 
   const languages = [
-    { code: 'pl', label: 'PL' },
-    { code: 'en', label: 'EN' },
-    { code: 'de', label: 'DE' },
-    { code: 'lt', label: 'LT' },
+    { code: 'pl', label: 'PL', flag: 'pl' },
+    { code: 'en', label: 'EN', flag: 'gb' },
+    { code: 'de', label: 'DE', flag: 'de' },
+    { code: 'lt', label: 'LT', flag: 'lt' },
   ];
 
   const activeLang = languages.find(l => l.code === locale) || languages[0];
@@ -43,8 +43,13 @@ export default function LanguageSwitcher({ variant = 'responsive' }: { variant?:
         className={`${styles.flagBtn} ${styles.active} ${styles.dropdownToggle}`} 
         onClick={() => setIsOpen(!isOpen)}
         title={activeLang.label}
+        style={{ border: 'none', background: 'transparent' }}
       >
-        <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>{activeLang.label}</span>
+        <img 
+          src={`https://flagcdn.com/w40/${activeLang.flag}.png`} 
+          alt={activeLang.label}
+          style={{ width: '24px', height: '16px', borderRadius: '2px', display: 'block' }} 
+        />
         <ChevronDown className={`${styles.chevron} ${isOpen ? styles.open : ''}`} size={16} />
       </button>
 
@@ -55,8 +60,13 @@ export default function LanguageSwitcher({ variant = 'responsive' }: { variant?:
             onClick={() => changeLanguage(lng.code)}
             className={`${styles.flagBtn} ${locale === lng.code ? styles.active : ''}`}
             title={lng.label}
+            style={{ border: 'none', background: 'transparent', padding: '8px 12px' }}
           >
-            <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>{lng.label}</span>
+            <img 
+              src={`https://flagcdn.com/w40/${lng.flag}.png`} 
+              alt={lng.label}
+              style={{ width: '24px', height: '16px', borderRadius: '2px', display: 'block' }} 
+            />
           </button>
         ))}
       </div>
