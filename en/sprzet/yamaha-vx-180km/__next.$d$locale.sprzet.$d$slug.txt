@@ -2,4 +2,4 @@
 2:I[24835,["/SKUTERY-GIZYCKO/_next/static/chunks/3aouc8mwroeq6.js","/SKUTERY-GIZYCKO/_next/static/chunks/42_jwwzo4m8pm.js"],"default"]
 3:I[88074,["/SKUTERY-GIZYCKO/_next/static/chunks/3aouc8mwroeq6.js","/SKUTERY-GIZYCKO/_next/static/chunks/42_jwwzo4m8pm.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"ryXr4KrqM7c74x2pnNp2F"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"s8BLoPd8fZF0jnchlwtAc"}
