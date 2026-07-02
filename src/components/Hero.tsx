@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import styles from './Hero.module.scss';
 import { motion, Variants } from 'framer-motion';
@@ -32,8 +33,21 @@ interface HeroProps {
   showArrowDown?: boolean;
 }
 
-export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, compact, showArrowDown }: HeroProps) {
+export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, compact = false, showArrowDown = false }: HeroProps) {
   const t = useTranslations('Hero');
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Force play to ensure it doesn't get stuck on some browsers/React hydration
+      videoRef.current.muted = true;
+      videoRef.current.defaultMuted = true;
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(e => console.log('Autoplay prevented:', e));
+      }
+    }
+  }, [videoSrc]);
 
   const finalTitle = title || t('title');
   const finalSubtitle = subtitle || t('subtitle');
@@ -46,6 +60,7 @@ export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, comp
       {finalVideoSrc && (
         <div className={styles.videoWrapper}>
           <video
+            ref={videoRef}
             autoPlay
             loop
             muted
