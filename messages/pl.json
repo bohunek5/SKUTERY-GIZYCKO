@@ -22,27 +22,27 @@
     "subtitle": "Sprzęt",
     "details": "Szczegóły",
     "items": {
-      "vx110_1": {
+      "yamaha-vx": {
         "name": "YAMAHA VX 110KM",
         "type": "Skuter wodny"
       },
-      "vx110_2": {
+      "yamaha-vx-2": {
         "name": "YAMAHA VX 110KM",
         "type": "Skuter wodny"
       },
-      "honda": {
+      "honda-aquatrax": {
         "name": "HONDA AQUATRAX",
         "type": "Skuter wodny"
       },
-      "vx180": {
+      "yamaha-vx-180km": {
         "name": "YAMAHA VX 180km",
-        "type": "Łódź QUICKSILVER"
+        "type": "Skuter wodny"
       },
-      "activ505": {
+      "lodz-quicksilver-505-open": {
         "name": "ACTIV 505 OPEN",
         "type": "Łódź QUICKSILVER"
       },
-      "quick675": {
+      "lodz-quicksilver-675": {
         "name": "QUICKSILVER 675",
         "type": "Łódź"
       }

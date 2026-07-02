@@ -54,15 +54,24 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .span3col, .span4col { grid-column: span 2; }
+  .span2col { grid-column: span 1; }
+  .span2row { grid-row: span 1; }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .bentoGrid {
     grid-template-columns: 1fr;
-    grid-auto-rows: 250px;
+    display: grid;
+    gap: 24px;
   }
-  .span2col, .span3col, .span4col { grid-column: span 1; }
-  .span2row { grid-row: span 1; height: 350px; }
+  
+  .bentoCard {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .span2col, .span3col, .span4col { grid-column: span 1 !important; }
+  .span2row { grid-row: span 1 !important; }
 }
 
 .imageWrapper {
@@ -103,16 +112,33 @@
   color: #fff; /* Always white on dark overlay */
   
   h3 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #fff;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
-  
-  p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 16px;
-    font-weight: 500;
+
+  .specs {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 16px 0;
+    line-height: 1.5;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+    }
   }
 }
 

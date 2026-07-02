@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl';
 import styles from './Hero.module.scss';
 import { motion, Variants } from 'framer-motion';
 
+import { Link } from '@/i18n/routing';
+
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
@@ -36,7 +38,7 @@ export default function Hero() {
           playsInline 
           className={styles.videoBackground}
         >
-          <source src="/SKUTERY-GIZYCKO/videos/hero.mp4" type="video/mp4" />
+          <source src="/SKUTERY-GIZYCKO/videos/jetski.mp4" type="video/mp4" />
         </video>
       </div>
       <div className={styles.overlay}></div>
@@ -56,7 +58,7 @@ export default function Hero() {
         </motion.p>
         
         <motion.div className={styles.actionGroup} variants={itemVariants}>
-          <a href="#contact" className="btn-primary">{t('cta')}</a>
+          <Link href="/kontakt" className="btn-primary">{t('cta')}</Link>
         </motion.div>
       </motion.div>
     </section>

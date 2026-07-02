@@ -35,11 +35,14 @@ export default function Navigation() {
           <div className={styles.weatherMini}>
             <WeatherWidget />
           </div>
-          <LanguageSwitcher />
+          <LanguageSwitcher variant="dropdown" />
           <ThemeToggle />
         </div>
 
         <div className={`${styles.links} ${mobileMenuOpen ? styles.open : ''}`}>
+          <div className={styles.mobileMenuLogo}>
+            <img src="/SKUTERY-GIZYCKO/assets/skutery-logo.svg" alt="Jet Ski Rental Maciej Skwarko" className="logo-invert" />
+          </div>
           <Link href="/o-nas" onClick={() => setMobileMenuOpen(false)}>{t('about')}</Link>
           <Link href="/sprzet" onClick={() => setMobileMenuOpen(false)}>{t('fleet')}</Link>
           <Link href="/jak-to-dziala" onClick={() => setMobileMenuOpen(false)}>{t('howItWorks')}</Link>
@@ -54,7 +57,7 @@ export default function Navigation() {
         <div className={styles.desktopActions}>
           <WeatherWidget />
           <ThemeToggle />
-          <LanguageSwitcher />
+          <LanguageSwitcher variant="dropdown" />
           <Link href="/kontakt" className="btn-primary">{t('bookNow')}</Link>
         </div>
 

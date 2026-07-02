@@ -22,27 +22,27 @@
     "subtitle": "Įranga",
     "details": "Išsami informacija",
     "items": {
-      "vx110_1": {
+      "yamaha-vx": {
         "name": "YAMAHA VX 110AG",
         "type": "Vandens motociklas"
       },
-      "vx110_2": {
+      "yamaha-vx-2": {
         "name": "YAMAHA VX 110AG",
         "type": "Vandens motociklas"
       },
-      "honda": {
+      "honda-aquatrax": {
         "name": "HONDA AQUATRAX",
         "type": "Vandens motociklas"
       },
-      "vx180": {
+      "yamaha-vx-180km": {
         "name": "YAMAHA VX 180ag",
         "type": "QUICKSILVER valtis"
       },
-      "activ505": {
+      "lodz-quicksilver-505-open": {
         "name": "ACTIV 505 OPEN",
         "type": "QUICKSILVER valtis"
       },
-      "quick675": {
+      "lodz-quicksilver-675": {
         "name": "QUICKSILVER 675",
         "type": "Valtis"
       }

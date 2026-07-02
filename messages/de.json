@@ -22,27 +22,27 @@
     "subtitle": "Ausrüstung",
     "details": "Details",
     "items": {
-      "vx110_1": {
+      "yamaha-vx": {
         "name": "YAMAHA VX 110PS",
         "type": "Jetski"
       },
-      "vx110_2": {
+      "yamaha-vx-2": {
         "name": "YAMAHA VX 110PS",
         "type": "Jetski"
       },
-      "honda": {
+      "honda-aquatrax": {
         "name": "HONDA AQUATRAX",
         "type": "Jetski"
       },
-      "vx180": {
+      "yamaha-vx-180km": {
         "name": "YAMAHA VX 180PS",
         "type": "QUICKSILVER Boot"
       },
-      "activ505": {
+      "lodz-quicksilver-505-open": {
         "name": "ACTIV 505 OPEN",
         "type": "QUICKSILVER Boot"
       },
-      "quick675": {
+      "lodz-quicksilver-675": {
         "name": "QUICKSILVER 675",
         "type": "Boot"
       }

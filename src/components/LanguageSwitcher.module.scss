@@ -1,20 +1,108 @@
 .switcher {
+  position: relative;
   display: flex;
   align-items: center;
+}
+
+/* Row variant - just show the dropdown content as a static row and hide the toggle */
+.row {
+  .dropdownToggle {
+    display: none;
+  }
+  
+  .dropdown {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+    gap: 8px;
+  }
+}
+
+/* Responsive variant - row on desktop, dropdown on mobile */
+.responsive {
+  @media (min-width: 1025px) {
+    .dropdownToggle {
+      display: none;
+    }
+    
+    .dropdown {
+      position: static;
+      transform: none;
+      flex-direction: row;
+      background: transparent;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      opacity: 1;
+      visibility: visible;
+      margin-top: 0;
+      gap: 8px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .dropdownToggle {
+      display: flex;
+    }
+    .dropdown {
+      /* Uses default absolute dropdown styles */
+    }
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
   gap: 6px;
+  background: rgba(15, 23, 42, 0.95);
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  :global([data-theme='light']) & {
+    background: rgba(243, 244, 246, 0.98);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .flagBtn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  padding: 4px 6px;
-  font-size: 1.15rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 1.3rem;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
   
   :global([data-theme='light']) & {
     background: rgba(0, 0, 0, 0.03);
@@ -24,11 +112,22 @@
   &.active {
     background: var(--primary);
     border-color: var(--primary);
-    transform: scale(1.05);
   }
 
   &:hover {
-    transform: scale(1.1);
     background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.chevron {
+  transition: transform 0.2s;
+  color: white;
+  
+  :global([data-theme='light']) & {
+    color: #1e293b;
+  }
+
+  &.open {
+    transform: rotate(180deg);
   }
 }
