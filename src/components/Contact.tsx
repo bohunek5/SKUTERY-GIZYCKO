@@ -4,11 +4,24 @@ import { useTranslations } from 'next-intl';
 import styles from './Contact.module.scss';
 import { MapPin, Phone, Mail, Navigation, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Contact() {
   const t = useTranslations('Contact');
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (isLightboxOpen && e.key === 'Escape') {
+        setIsLightboxOpen(false);
+      }
+    };
+
+    if (isLightboxOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLightboxOpen]);
 
   return (
     <section id="contact" className={`section ${styles.contact}`}>
@@ -75,7 +88,19 @@ export default function Contact() {
               className={styles.mapIframe}
             ></iframe>
           </div>
-          <div className={styles.photoCard} onClick={() => setIsLightboxOpen(true)}>
+          <div 
+            className={styles.photoCard} 
+            onClick={() => setIsLightboxOpen(true)}
+            tabIndex={0}
+            role="button"
+            aria-label="Open photo gallery"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setIsLightboxOpen(true);
+              }
+            }}
+          >
             <img src="/SKUTERY-GIZYCKO/images/tu-jestesmy.jpg" alt="Tutaj nas znajdziesz w porcie" />
             <div className={styles.photoLabel}>
               <Navigation size={18} className="text-primary" /> TU JESTEŚMY
