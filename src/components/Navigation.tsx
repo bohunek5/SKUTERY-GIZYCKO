@@ -38,17 +38,6 @@ export default function Navigation() {
           </Link>
         </div>
 
-        {!mobileMenuOpen && (
-          <div className={styles.centerWidgets}>
-            <WeatherWidget />
-            <ThemeToggle compact={true} />
-            <LanguageSwitcher compact={true} />
-          </div>
-        )}
-        <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle menu">
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-
         <div className={`${styles.links} ${mobileMenuOpen ? styles.open : ''}`}>
           <div className={styles.mobileMenuLogo}>
             <Link href="/" onClick={(e) => {
@@ -71,6 +60,17 @@ export default function Navigation() {
             <Link href="/kontakt" className="btn-primary" style={{ color: '#ffffff' }} onClick={() => setMobileMenuOpen(false)}>{t('bookNow')}</Link>
           </div>
         </div>
+
+        {!mobileMenuOpen && (
+          <div className={styles.centerWidgets}>
+            <WeatherWidget />
+            <ThemeToggle compact={true} />
+            <LanguageSwitcher compact={true} />
+          </div>
+        )}
+        <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle menu">
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
 
         <div className={styles.desktopActions}>
           <Link href="/kontakt" className="btn-primary">{t('bookNow')}</Link>

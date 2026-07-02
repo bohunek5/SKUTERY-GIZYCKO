@@ -18,8 +18,29 @@ const containerVariants: Variants = {
   }
 };
 
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
+const titleVariants: Variants = {
+  hidden: { opacity: 0, y: 40, filter: 'blur(10px)', scale: 0.95 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    filter: 'blur(0px)', 
+    scale: 1, 
+    transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } 
+  }
+};
+
+const subtitleVariants: Variants = {
+  hidden: { opacity: 0, y: 20, filter: 'blur(5px)' },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    filter: 'blur(0px)', 
+    transition: { duration: 1.0, ease: [0.16, 1, 0.3, 1] } 
+  }
+};
+
+const actionVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
 
@@ -91,15 +112,15 @@ export default function Hero({ title, subtitle, videoSrc, imageSrc, ctaText, cta
         initial="hidden"
         animate="show"
       >
-        <motion.h1 className={styles.heroTitle} variants={itemVariants}>
+        <motion.h1 className={styles.heroTitle} variants={titleVariants}>
           {finalTitle}
         </motion.h1>
         
-        <motion.p className={styles.subtitle} variants={itemVariants}>
+        <motion.p className={styles.subtitle} variants={subtitleVariants}>
           {finalSubtitle}
         </motion.p>
         
-        <motion.div className={styles.actionGroup} variants={itemVariants}>
+        <motion.div className={styles.actionGroup} variants={actionVariants}>
           {showArrowDown ? (
             <button 
               onClick={(e) => {

@@ -8,6 +8,11 @@
   overflow: hidden;
   padding-top: 80px; /* Offset for navigation */
   background-color: #0f172a;
+
+  @media (max-width: 768px) {
+    height: 100dvh;
+    min-height: 100dvh;
+  }
 }
 
 .compact {
@@ -40,7 +45,7 @@
   pointer-events: none;
 
   @media (max-width: 768px) {
-    object-position: 30% center; /* Przesunięcie ciutke w lewo na mobile */
+    object-position: 75% center; /* Przesunięcie w prawo na mobile */
   }
 }
 
@@ -115,6 +120,7 @@
   @media (max-width: 640px) {
     flex-direction: column;
     width: 100%;
+    margin-bottom: 90px; /* Push up above the floating booking bar */
     
     a {
       width: 100%;
