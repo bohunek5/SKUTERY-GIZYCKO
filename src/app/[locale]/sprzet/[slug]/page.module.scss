@@ -9,16 +9,13 @@
 /* 1. HERO SECTION */
 .heroLayout {
   display: flex;
-  height: 100vh;
-  min-height: 800px;
+  height: auto;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
   background: #020617; /* Dark base for hero */
 
   @media (max-width: 992px) {
     flex-direction: column-reverse;
-    min-height: 100dvh;
-    height: 100dvh;
   }
 }
 
@@ -26,7 +23,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 120px 5vw 80px 5vw;
   position: relative;
   z-index: 10;
@@ -35,7 +32,7 @@
   @media (max-width: 992px) {
     flex: none;
     padding: 0 20px 40px 20px;
-    justify-content: flex-end;
+    justify-content: flex-start;
     max-width: 100%;
     margin-top: -200px; /* pull up into the gradient */
   }
@@ -137,12 +134,13 @@
   }
 
   .title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 800;
     line-height: 1.1;
     color: #fff;
     margin-bottom: 24px;
     text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    word-break: break-word;
   }
 
   .description {
