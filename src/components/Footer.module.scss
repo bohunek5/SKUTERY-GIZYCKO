@@ -45,6 +45,13 @@
   .contactList li {
     justify-content: flex-start;
   }
+  
+  @media (max-width: 640px) {
+    text-align: center;
+    .contactList li {
+      justify-content: center;
+    }
+  }
 }
 
 .centeredCol {
@@ -59,6 +66,13 @@
   text-align: right;
   .linksList li {
     justify-content: flex-end;
+  }
+  
+  @media (max-width: 640px) {
+    text-align: center;
+    .linksList li {
+      justify-content: center;
+    }
   }
 }
 

@@ -30,7 +30,7 @@ export default async function SprzetPage({ params }: { params: Promise<{ locale:
         </div>
       </div>
 
-      <div style={{ background: 'var(--bg-primary)', paddingBottom: '60px' }}>
+      <div style={{ background: 'var(--bg-primary)' }}>
         <Fleet />
       </div>
     </main>
