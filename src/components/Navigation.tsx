@@ -38,11 +38,13 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <div className={styles.mobileTopBarControls}>
-          <WeatherWidget />
-          <ThemeToggle compact={true} />
-          <LanguageSwitcher compact={true} />
-        </div>
+        {!mobileMenuOpen && (
+          <div className={styles.centerWidgets}>
+            <WeatherWidget />
+            <ThemeToggle compact={true} />
+            <LanguageSwitcher compact={true} />
+          </div>
+        )}
         <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle menu">
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -71,9 +73,6 @@ export default function Navigation() {
         </div>
 
         <div className={styles.desktopActions}>
-          <WeatherWidget />
-          <ThemeToggle />
-          <LanguageSwitcher />
           <Link href="/kontakt" className="btn-primary">{t('bookNow')}</Link>
         </div>
       </div>

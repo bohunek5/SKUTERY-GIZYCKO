@@ -16,7 +16,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         compact={true}
         showArrowDown={true}
       />
-      <div style={{ paddingTop: '30px', paddingBottom: '80px' }}>
+      <div style={{ marginTop: '-60px', paddingBottom: '80px', position: 'relative', zIndex: 10 }}>
         <About />
       </div>
     </main>

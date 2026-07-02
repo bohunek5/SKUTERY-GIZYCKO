@@ -26,7 +26,7 @@ export default async function SprzetPage({ params }: { params: Promise<{ locale:
         showArrowDown={true}
       />
 
-      <div style={{ background: 'var(--bg-primary)' }}>
+      <div style={{ background: 'var(--bg-primary)', marginTop: '-60px', position: 'relative', zIndex: 10 }}>
         <Fleet />
       </div>
     </main>
