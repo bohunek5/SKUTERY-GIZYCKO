@@ -11,7 +11,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
       <Hero 
         title="Galeria" 
         subtitle="Zobacz, jak wygląda prawdziwa przygoda na Mazurach" 
-        videoSrc="/SKUTERY-GIZYCKO/assets/galeria-hero.mp4" 
+        videoSrc="/SKUTERY-GIZYCKO/videos/galeria-hero.mp4" 
         ctaText="Zarezerwuj sprzęt" 
         ctaLink="/kontakt" 
       />

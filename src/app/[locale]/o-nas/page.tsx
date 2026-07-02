@@ -11,7 +11,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <Hero 
         title="O nas" 
         subtitle="Poznaj naszą historię i pasję do sportów wodnych" 
-        videoSrc="/SKUTERY-GIZYCKO/assets/o-nas-hero.mp4" 
+        videoSrc="/SKUTERY-GIZYCKO/videos/o-nas-hero.mp4" 
         ctaText="Zobacz nasz sprzęt" 
         ctaLink="/sprzet" 
       />
