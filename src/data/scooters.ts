@@ -5,6 +5,7 @@ export interface ScooterSpec {
   capacity: string;
   length: string;
   weight: string;
+  price: string;
   description: string;
   gallery: string[];
   mainImage: string;
@@ -18,6 +19,7 @@ export const scootersData: Record<string, ScooterSpec> = {
     capacity: '3 osoby',
     length: '3.22 m',
     weight: '334 kg',
+    price: 'od 300 zł / h',
     description: 'Skuter wodny Yamaha VX110 Cruiser to doskonały sprzęt zarówno dla początkujących, jak i zaawansowanych motorowodniaków. Posiada niezawodny, oszczędny silnik czterosuwowy oraz 3-osobowe siodło. Gwarantuje bezpieczeństwo i świetną zabawę na jeziorach.',
     mainImage: '/SKUTERY-GIZYCKO/assets/20210211_181101.jpg',
     gallery: [
@@ -34,6 +36,7 @@ export const scootersData: Record<string, ScooterSpec> = {
     capacity: '3 osoby',
     length: '3.22 m',
     weight: '334 kg',
+    price: 'od 300 zł / h',
     description: 'Bliźniaczy model Yamahy VX 110KM. Doskonały do wycieczek z przyjaciółmi dzięki 3-osobowej kanapie i intuicyjnemu sterowaniu. Stabilny na fali, zapewnia pełen komfort pływania.',
     mainImage: '/SKUTERY-GIZYCKO/assets/vx4.jpg',
     gallery: [
@@ -50,6 +53,7 @@ export const scootersData: Record<string, ScooterSpec> = {
     capacity: '3 osoby',
     length: '3.20 m',
     weight: '360 kg',
+    price: 'od 350 zł / h',
     description: 'Skuter wodny Honda Aquatrax o dużej mocy (165 KM), stworzony z myślą o miłośnikach większych prędkości i agresywniejszego pływania. Doskonałe wyważenie, sportowy charakter i komfortowe fotele to jego główne atuty.',
     mainImage: '/SKUTERY-GIZYCKO/assets/1-1024x719.jpg',
     gallery: [
@@ -65,6 +69,7 @@ export const scootersData: Record<string, ScooterSpec> = {
     capacity: '3 osoby',
     length: '3.35 m',
     weight: '348 kg',
+    price: 'od 400 zł / h',
     description: 'Yamaha VX ze wzmocnionym silnikiem 180 KM. Bezkompromisowe przyspieszenie, precyzyjne sterowanie i niesamowite wrażenia na wodzie. To sprzęt dla wymagających poszukiwaczy adrenaliny, którzy chcą poczuć wiatr we włosach.',
     mainImage: '/SKUTERY-GIZYCKO/assets/IMG-20200809-WA0018.jpg',
     gallery: [
@@ -81,6 +86,7 @@ export const scootersData: Record<string, ScooterSpec> = {
     capacity: '5 osób',
     length: '5.07 m',
     weight: '582 kg',
+    price: 'od 800 zł / dzień',
     description: 'Motorówka Quicksilver Activ 505 Open łączy w sobie nowoczesny design, ergonomię i funkcjonalność. Na pokład bez problemu zabierzesz nawet 5 osób. Posiada obszerny pokład słoneczny na dziobie – idealny do letniego relaksu. Wymagane uprawnienia motorowodne.',
     mainImage: '/SKUTERY-GIZYCKO/assets/q1.jpg',
     gallery: [
@@ -96,6 +102,7 @@ export const scootersData: Record<string, ScooterSpec> = {
     capacity: '7 osób',
     length: '6.75 m',
     weight: '1084 kg',
+    price: 'od 1200 zł / dzień',
     description: 'Flagowy model Quicksilver 675 to potężna łódź z silnikiem o mocy 150 KM. Komfortowa kanapa, obszerna kabina i pokład na 7 osób sprawiają, że to najlepszy wybór na rejsowanie po Szlaku Wielkich Jezior Mazurskich. Poczuj luksus i swobodę.',
     mainImage: '/SKUTERY-GIZYCKO/assets/q2.jpg',
     gallery: [

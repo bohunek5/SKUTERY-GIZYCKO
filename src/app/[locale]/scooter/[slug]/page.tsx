@@ -54,8 +54,10 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
           <Link href="/#fleet" className={styles.backBtn}>
             <FaArrowLeft /> Wróć do floty
           </Link>
-          <span className="subtitle">{type}</span>
-          <h1>{name}</h1>
+          <div className={styles.titleWrapper}>
+            <h1>{name}</h1>
+            <span className={styles.typeBadge}>{type}</span>
+          </div>
         </div>
       </div>
 
@@ -75,6 +77,15 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
                 <div className={styles.specInfo}>
                   <span className={styles.label}>Prędkość max / Moc</span>
                   <span className={styles.value}>{scooter.maxSpeed} / {scooter.horsepower}</span>
+                </div>
+              </div>
+              <div className={styles.specCard}>
+                <div className={styles.iconBox}>
+                  <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>PLN</span>
+                </div>
+                <div className={styles.specInfo}>
+                  <span className={styles.label}>Cena wynajmu</span>
+                  <span className={styles.value}>{scooter.price}</span>
                 </div>
               </div>
               <div className={styles.specCard}>
