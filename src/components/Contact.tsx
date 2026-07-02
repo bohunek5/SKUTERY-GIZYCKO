@@ -78,7 +78,7 @@ export default function Contact() {
         >
           <div className={styles.mapCard}>
             <iframe 
-              src="https://maps.google.com/maps?q=Port+Stranda,+Gi%C5%BCycko&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              src="https://maps.google.com/maps?q=54.052674,21.753303&t=&z=16&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
