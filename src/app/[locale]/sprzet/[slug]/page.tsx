@@ -46,9 +46,7 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
       
       <div className={styles.heroSection}>
         <div className={styles.heroBg}>
-          <video autoPlay muted loop playsInline className={styles.bgVideo}>
-            <source src="/SKUTERY-GIZYCKO/videos/oferta.mp4" type="video/mp4" />
-          </video>
+          <img src={scooter.mainImage} alt={name} className={styles.bgImg} />
           <div className={styles.overlay}></div>
         </div>
         
