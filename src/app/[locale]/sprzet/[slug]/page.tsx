@@ -5,7 +5,7 @@ import { scootersData } from '@/data/scooters';
 import styles from './page.module.scss';
 import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft, FaPhone } from 'react-icons/fa';
 import { Link } from '@/i18n/routing';
-import ScooterSlider from '@/components/ScooterSlider';
+import ClientImageGallery from '@/components/ClientImageGallery';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string, slug: string }> }) {
   const { locale, slug } = await params;
@@ -150,13 +150,7 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
         </div>
 
         <h2 className={styles.sectionTitle}>Galeria sprzętu</h2>
-        <div className={styles.imageGrid}>
-          {scooter.gallery.map((img, idx) => (
-            <div key={idx} className={`${styles.galleryImgWrapper} ${idx === 0 ? styles.featured : ''}`}>
-              <img src={img} alt={`${name} - Zdjęcie ${idx + 1}`} className={styles.galleryImg} />
-            </div>
-          ))}
-        </div>
+        <ClientImageGallery images={scooter.gallery} name={name} />
 
         {scooter.rules && scooter.rules.length > 0 && (
           <div className={styles.rulesSection}>

@@ -12,8 +12,8 @@ export default async function HowItWorksPage({ params }: { params: Promise<{ loc
         title="Jak to działa?" 
         subtitle="Proces wynajmu krok po kroku. To prostsze niż myślisz!" 
         videoSrc="/SKUTERY-GIZYCKO/videos/galeria-hero.mp4" 
-        ctaText="Sprawdź sprzęt" 
-        ctaLink="/sprzet" 
+        compact={true}
+        showArrowDown={true}
       />
       <div style={{ paddingTop: '80px', paddingBottom: '80px' }}>
         <HowItWorks />

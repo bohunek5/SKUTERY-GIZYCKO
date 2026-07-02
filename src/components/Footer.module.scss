@@ -40,6 +40,14 @@
   }
 }
 
+.centeredCol {
+  text-align: center;
+  
+  .contactList li {
+    justify-content: center;
+  }
+}
+
 .brand {
   max-width: 350px;
   margin-bottom: 30px;

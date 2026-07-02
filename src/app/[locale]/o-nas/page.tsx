@@ -1,19 +1,20 @@
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import About from '@/components/About';
 import Hero from '@/components/Hero';
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations('AboutPage');
 
   return (
     <main style={{ minHeight: '100vh', background: 'var(--bg-base)' }}>
       <Hero 
-        title="O nas" 
-        subtitle="Poznaj naszą historię i pasję do sportów wodnych" 
-        videoSrc="/SKUTERY-GIZYCKO/videos/o-nas-hero.mp4" 
-        ctaText="Zobacz nasz sprzęt" 
-        ctaLink="/sprzet" 
+        title={t('title')} 
+        subtitle={t('subtitle')} 
+        videoSrc="/SKUTERY-GIZYCKO/videos/o-nas.mp4" 
+        compact={true}
+        showArrowDown={true}
       />
       <div style={{ paddingTop: '80px', paddingBottom: '80px' }}>
         <About />

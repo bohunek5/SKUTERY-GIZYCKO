@@ -4,6 +4,7 @@ import styles from './Hero.module.scss';
 import { motion, Variants } from 'framer-motion';
 
 import { Link } from '@/i18n/routing';
+import { ChevronDown } from 'lucide-react';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -28,9 +29,10 @@ interface HeroProps {
   ctaText?: string;
   ctaLink?: string;
   compact?: boolean;
+  showArrowDown?: boolean;
 }
 
-export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, compact }: HeroProps) {
+export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, compact, showArrowDown }: HeroProps) {
   const t = useTranslations('Hero');
 
   const finalTitle = title || t('title');
@@ -41,17 +43,20 @@ export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, comp
 
   return (
     <section className={`${styles.hero} ${compact ? styles.compact : ''}`} id="home">
-      <div className={styles.videoWrapper}>
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className={styles.videoBackground}
-        >
-          <source src={finalVideoSrc} type="video/mp4" />
-        </video>
-      </div>
+      {videoSrc && (
+        <div className={styles.videoWrapper}>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={styles.videoBackground}
+            poster={finalVideoSrc.replace('.mp4', '.png')}
+          >
+            <source src={finalVideoSrc} type="video/mp4" />
+          </video>
+        </div>
+      )}
       <div className={styles.overlay}></div>
       
       <motion.div 
@@ -69,7 +74,17 @@ export default function Hero({ title, subtitle, videoSrc, ctaText, ctaLink, comp
         </motion.p>
         
         <motion.div className={styles.actionGroup} variants={itemVariants}>
-          <Link href={finalCtaLink as any} className="btn-primary">{finalCtaText}</Link>
+          {showArrowDown ? (
+            <button 
+              onClick={() => window.scrollBy({ top: window.innerHeight * 0.6, behavior: 'smooth' })} 
+              className={styles.arrowDownBtn}
+              aria-label="Scroll down"
+            >
+              <ChevronDown size={48} />
+            </button>
+          ) : (
+            <Link href={finalCtaLink as any} className="btn-primary">{finalCtaText}</Link>
+          )}
         </motion.div>
       </motion.div>
     </section>
