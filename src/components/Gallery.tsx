@@ -7,6 +7,12 @@ import { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
+  '/SKUTERY-GIZYCKO/images/gallery/2331D.jpg',
+  '/SKUTERY-GIZYCKO/images/gallery/3213123.jpg',
+  '/SKUTERY-GIZYCKO/images/gallery/423123.jpg',
+  '/SKUTERY-GIZYCKO/images/gallery/UUUUU22.jpg',
+  '/SKUTERY-GIZYCKO/images/gallery/D123123.jpg',
+  '/SKUTERY-GIZYCKO/images/gallery/323123123.jpg',
   '/SKUTERY-GIZYCKO/assets/20240630_105901-scaled.jpg',
   '/SKUTERY-GIZYCKO/assets/20240705_150810-scaled.jpg',
   '/SKUTERY-GIZYCKO/assets/20240601_185516-scaled.jpg',

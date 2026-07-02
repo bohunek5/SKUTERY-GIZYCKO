@@ -15,6 +15,7 @@
   },
   "About": {
     "title": "O nas",
+    "subtitle": "Z pasji do sportów motorowodnych. Poznaj Jet Ski Rental.",
     "description": "Atrakcyjne położenie naszego regionu na Szlaku Wielkich Jezior Mazurskich oraz zamiłowanie do sprzętu wodnego było inicjatywą do stworzenia wypożyczalni Jet Ski Rental Maciej Skwarko, w której wynajmiesz skutery wodne oraz motorówki. Odwiedź nas w sezonie letnim w Giżycku i spędź ekscytujący czas na wodzie. Poznaj wspaniałe zakątki Mazur, niedostępne z lądu. Znajdziesz nas w portach: Stanica Wodna Stranda oraz Łabędzi Ostrów."
   },
   "Fleet": {
@@ -72,13 +73,13 @@
     }
   },
   "Gallery": {
-    "title": "Nasze zdjęcia",
-    "subtitle": "Galeria",
+    "title": "Nasze maszyny w akcji",
+    "subtitle": "Zobacz galerię zdjęć i poczuj adrenalinę",
     "more": "Więcej"
   },
   "Contact": {
-    "title": "Odwiedź nas",
-    "subtitle": "Kontakt",
+    "title": "Skontaktuj się z nami",
+    "subtitle": "Zarezerwuj sprzęt i zaplanuj niezapomniany wypoczynek na Mazurach",
     "addressTitle": "Adres",
     "address": "Pierkunowo 36, 11-500 Giżycko",
     "phoneTitle": "Numer telefonu",

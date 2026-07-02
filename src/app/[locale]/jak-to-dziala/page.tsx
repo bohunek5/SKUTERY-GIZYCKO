@@ -11,7 +11,7 @@ export default async function HowItWorksPage({ params }: { params: Promise<{ loc
       <Hero 
         title="Jak to działa?" 
         subtitle="Proces wynajmu krok po kroku. To prostsze niż myślisz!" 
-        videoSrc="/SKUTERY-GIZYCKO/videos/galeria-hero.mp4" 
+        videoSrc="/SKUTERY-GIZYCKO/videos/oferta.mp4" 
         compact={true}
         showArrowDown={true}
       />
