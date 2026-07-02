@@ -15,7 +15,7 @@ export default async function HowItWorksPage({ params }: { params: Promise<{ loc
         compact={true}
         showArrowDown={true}
       />
-      <div style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+      <div style={{ marginTop: '-60px', paddingBottom: '80px', position: 'relative', zIndex: 10 }}>
         <HowItWorks />
       </div>
     </main>
