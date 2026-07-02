@@ -64,11 +64,11 @@ export default function Footer() {
           <div className={styles.col}>
             <h3>Warto zobaczyć z wody</h3>
             <ul className={styles.linksList}>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">Port Stranda (baza)</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">Kanał Giżycki (Łuczański)</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">Wyspa Miłości (Niegocin)</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">Szlak Łabędzi (Kisajno)</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">Twierdza Boyen (z wody)</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=Port+Stranda+Giżycko" target="_blank" rel="noopener noreferrer">Port Stranda (baza)</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=Kanał+Łuczański+Giżycko" target="_blank" rel="noopener noreferrer">Kanał Giżycki (Łuczański)</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=Wyspa+Miłości+Jezioro+Niegocin" target="_blank" rel="noopener noreferrer">Wyspa Miłości (Niegocin)</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=Jezioro+Kisajno" target="_blank" rel="noopener noreferrer">Szlak Łabędzi (Kisajno)</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=Twierdza+Boyen+Giżycko" target="_blank" rel="noopener noreferrer">Twierdza Boyen (z wody)</a></li>
             </ul>
           </div>
         </div>
