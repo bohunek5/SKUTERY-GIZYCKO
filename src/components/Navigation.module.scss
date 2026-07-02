@@ -158,8 +158,10 @@
   .mobileTopBarControls {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex: 1;
     gap: 8px;
-    margin-left: auto;
+    margin: 0 10px;
   }
 
   .mobileToggle {
@@ -184,27 +186,27 @@
   }
 
   .links {
-    position: absolute;
-    top: calc(100% + 8px);
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: auto;
-    background: rgba(15, 23, 42, 0.98);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.99));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: none;
+    box-shadow: none;
     
     :global([data-theme='light']) & {
-      background: rgba(243, 244, 246, 0.98);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.95), rgba(224, 242, 254, 0.95));
+      border: none;
+      box-shadow: none;
     }
     
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Move links higher */
+    justify-content: center; /* Move links to center of screen */
     align-items: center;
     gap: 8px; /* Slightly tighter gap */
     padding: 16px 20px 24px 20px; /* Less top padding */
@@ -223,16 +225,16 @@
     }
     
     a:not(.btn-primary) {
-      font-size: 1.15rem;
-      font-weight: 500;
+      font-size: 1.5rem;
+      font-weight: 600;
       width: 100%;
       text-align: center;
-      padding: 12px 0; /* Slightly tighter padding */
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
       :global([data-theme='light']) & {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        color: #1e293b; /* Ensure text is visible in light mode */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        color: #0c4a6e; /* Deep blue for light mode text */
       }
 
       &::after {

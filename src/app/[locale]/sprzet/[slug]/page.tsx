@@ -99,7 +99,15 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
           
           <button 
             className={styles.scrollDownBtn} 
-            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+            onClick={(e) => {
+              const section = (e.currentTarget as HTMLElement).closest(`.${styles.heroSection}`);
+              const nextSibling = section?.nextElementSibling;
+              if (nextSibling) {
+                nextSibling.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+              }
+            }}
             aria-label="Przewiń w dół"
           >
             <FaArrowDown />

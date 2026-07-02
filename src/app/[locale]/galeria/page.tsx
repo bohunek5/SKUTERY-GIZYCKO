@@ -16,7 +16,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
         compact={true}
         showArrowDown={true}
       />
-      <div style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+      <div style={{ paddingTop: '30px', paddingBottom: '80px' }}>
         <Gallery />
       </div>
     </main>

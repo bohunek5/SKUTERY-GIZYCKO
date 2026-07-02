@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Fleet from '@/components/Fleet';
+import Hero from '@/components/Hero';
 import styles from './page.module.scss';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -13,22 +14,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function SprzetPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations('Navigation'); // Or use another namespace if preferred for title
 
   return (
     <main className={styles.main}>
-      <div className={styles.heroSection}>
-        <div className={styles.videoWrapper}>
-          <video autoPlay muted loop playsInline className={styles.videoBackground} poster="/SKUTERY-GIZYCKO/videos/oferta.png">
-            <source src="/SKUTERY-GIZYCKO/videos/oferta.mp4" type="video/mp4" />
-          </video>
-          <div className={styles.overlay}></div>
-        </div>
-        
-        <div className={`container ${styles.heroContent}`}>
-          <span className="subtitle" style={{ color: 'white', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>Nasza oferta</span>
-          <h1>Sprzęt</h1>
-        </div>
-      </div>
+      <Hero 
+        title="Sprzęt" 
+        subtitle="Nasza oferta" 
+        videoSrc="/SKUTERY-GIZYCKO/videos/oferta.mp4" 
+        compact={true}
+        showArrowDown={true}
+      />
 
       <div style={{ background: 'var(--bg-primary)' }}>
         <Fleet />
