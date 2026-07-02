@@ -5,10 +5,10 @@ import {notFound} from 'next/navigation';
 import '@/styles/globals.scss';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import {Metadata} from 'next';
 import { Inter } from 'next/font/google';
-
 const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700', '800'],
@@ -55,6 +55,7 @@ export default async function LocaleLayout({
             <Navigation />
             {children}
             <Footer />
+            <ScrollToTop />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

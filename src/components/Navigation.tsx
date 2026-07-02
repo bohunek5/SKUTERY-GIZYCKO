@@ -30,6 +30,7 @@ export default function Navigation() {
         <div className={styles.logo}>
           <Link href="/" onClick={(e) => {
             if (window.location.pathname === '/' || window.location.pathname === '/pl' || window.location.pathname === '/en' || window.location.pathname === '/de' || window.location.pathname === '/lt') {
+              e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }
           }}>
@@ -51,6 +52,7 @@ export default function Navigation() {
             <Link href="/" onClick={(e) => {
               setMobileMenuOpen(false);
               if (window.location.pathname === '/' || window.location.pathname === '/pl' || window.location.pathname === '/en' || window.location.pathname === '/de' || window.location.pathname === '/lt') {
+                e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }} style={{ display: 'block' }}>
