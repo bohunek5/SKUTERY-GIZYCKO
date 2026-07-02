@@ -50,9 +50,10 @@
   }
 
   p, a {
-    font-size: 1.15rem;
+    font-size: clamp(0.85rem, 4vw, 1.15rem);
     color: var(--text-main);
     font-weight: 700;
+    white-space: nowrap;
   }
 
   a:hover {

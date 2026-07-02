@@ -160,10 +160,12 @@
     
     @media (max-width: 640px) {
       justify-content: center;
-      white-space: nowrap;
+      font-size: clamp(0.7rem, 3.5vw, 0.95rem);
+      gap: 8px;
     }
 
-    a {
+    a, span {
+      white-space: nowrap;
       color: inherit;
       transition: color 0.3s ease;
 
