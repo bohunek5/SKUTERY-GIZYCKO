@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export function generateStaticParams() {
   const locales = ['pl', 'en', 'de', 'lt'];
-  const params: any[] = [];
+  const params: { locale: string; slug: string }[] = [];
   locales.forEach((locale) => {
     Object.keys(scootersData).forEach((slug) => {
       params.push({ locale, slug });

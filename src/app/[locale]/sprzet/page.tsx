@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function SprzetPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('Navigation'); // Or use another namespace if preferred for title
+
 
   return (
     <main className={styles.main}>

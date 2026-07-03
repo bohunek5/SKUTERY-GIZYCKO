@@ -143,7 +143,10 @@ export default function Hero({ title, subtitle, videoSrc, imageSrc, posterSrc, c
               <ChevronDown size={48} />
             </button>
           ) : (
-            <Link href={finalCtaLink as any} className="btn-primary">{finalCtaText}</Link>
+            <>
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+              <Link href={finalCtaLink as any} className="btn-primary">{finalCtaText}</Link>
+            </>
           )}
         </motion.div>
       </motion.div>

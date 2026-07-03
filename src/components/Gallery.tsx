@@ -127,7 +127,7 @@ export default function Gallery() {
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
+              onDragEnd={(e, { offset }) => {
                 const swipe = offset.x;
                 if (swipe < -50) {
                   setSelectedIndex(prev => (prev !== null && prev < images.length - 1 ? prev + 1 : 0));
