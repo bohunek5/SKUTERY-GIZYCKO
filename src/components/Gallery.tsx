@@ -18,7 +18,16 @@ const images = [
   '/SKUTERY-GIZYCKO/assets/20240601_185516-scaled.jpg',
   '/SKUTERY-GIZYCKO/assets/20240528_122529-scaled.jpg',
   '/SKUTERY-GIZYCKO/assets/20200611_213441-scaled.jpg',
-  '/SKUTERY-GIZYCKO/assets/20190805_200721-scaled.jpg'
+  '/SKUTERY-GIZYCKO/assets/20190805_200721-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/1-1024x719.jpg',
+  '/SKUTERY-GIZYCKO/assets/20200611_205511-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20200611_211053-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20210211_181101.jpg',
+  '/SKUTERY-GIZYCKO/assets/20240528_122225-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20240601_182330-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/20240601_182339-scaled.jpg',
+  '/SKUTERY-GIZYCKO/assets/IMG-20190819-WA0005.jpg',
+  '/SKUTERY-GIZYCKO/assets/IMG-20200920-WA0004-1024x768.jpg'
 ];
 
 export default function Gallery() {
@@ -115,6 +124,17 @@ export default function Gallery() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = offset.x;
+                if (swipe < -50) {
+                  setSelectedIndex(prev => (prev !== null && prev < images.length - 1 ? prev + 1 : 0));
+                } else if (swipe > 50) {
+                  setSelectedIndex(prev => (prev !== null && prev > 0 ? prev - 1 : images.length - 1));
+                }
+              }}
               onClick={(e) => e.stopPropagation()}
             />
 

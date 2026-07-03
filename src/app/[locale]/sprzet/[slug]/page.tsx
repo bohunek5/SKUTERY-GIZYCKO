@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import ClientMobileBookingBar from '@/components/ClientMobileBookingBar';
 import { scootersData } from '@/data/scooters';
 import styles from './page.module.scss';
 import { FaTachometerAlt, FaUsers, FaWeightHanging, FaArrowsAltH, FaArrowLeft, FaPhone, FaCheckCircle, FaGasPump } from 'react-icons/fa';
@@ -85,15 +86,10 @@ export default async function ScooterPage({ params }: { params: Promise<{ locale
       </section>
 
       {/* MOBILE BOOKING BAR */}
-      <div className={styles.mobileBookingBar}>
-        <div className={styles.mobilePriceInfo}>
-          <span className={styles.priceLabel}>Wynajem: {name}</span>
-          <div className={styles.priceValue}>od {scooter.pricePerHour.replace('*', '')}</div>
-        </div>
-        <a href="tel:+48507697292" className={`btn-primary ${styles.mobileBookBtn}`}>
-          <FaPhone /> Zadzwoń
-        </a>
-      </div>
+      <ClientMobileBookingBar 
+        scooterName={name}
+        pricePerHour={scooter.pricePerHour}
+      />
 
       <div className="container">
         

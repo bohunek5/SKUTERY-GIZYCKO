@@ -37,13 +37,11 @@ export default function Navigation() {
           </Link>
         </div>
 
-        {!mobileMenuOpen && (
-          <div className={styles.mobileTopBarControls}>
-            <WeatherWidget />
-            <ThemeToggle compact={true} />
-            <LanguageSwitcher compact={true} />
-          </div>
-        )}
+        <div className={styles.mobileTopBarControls}>
+          <WeatherWidget />
+          <ThemeToggle compact={true} />
+          <LanguageSwitcher compact={true} />
+        </div>
         <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle menu">
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>

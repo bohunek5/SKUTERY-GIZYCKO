@@ -235,62 +235,6 @@
   }
 }
 
-/* MOBILE BOOKING BAR */
-.mobileBookingBar {
-  display: none;
-  @media (max-width: 992px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px;
-    background: rgba(15, 23, 42, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
-    
-    :global([data-theme='light']) & {
-      background: rgba(243, 244, 246, 0.98);
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
-      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    .mobilePriceInfo {
-      display: flex;
-      flex-direction: column;
-      
-      .priceLabel {
-        color: var(--text-muted);
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 2px;
-      }
-      .priceValue {
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--text-main);
-      }
-    }
-    
-    .mobileBookBtn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 20px !important;
-      font-size: 1rem !important;
-      border-radius: 100px;
-      font-weight: 700;
-    }
-  }
-}
 
 /* GENERAL SECTIONS */
 .sectionTitle {

@@ -217,8 +217,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    padding: 0 20px;
+    gap: 8px;
+    padding: 16px 20px 32px 20px;
     
     opacity: 0;
     visibility: hidden;
@@ -234,11 +234,11 @@
     }
     
     a:not(.btn-primary) {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 500;
       width: 100%;
       text-align: center;
-      padding: 12px 0;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       letter-spacing: 0.5px;
 
@@ -272,12 +272,12 @@
     }
     
     :global(.btn-primary) {
-      width: 100%;
+      width: auto;
       text-align: center;
-      padding: 16px;
-      font-size: 1.1rem;
+      padding: 14px 40px;
+      font-size: 1.05rem;
       border-radius: 100px;
-      display: block;
+      display: inline-block;
       box-sizing: border-box;
       font-weight: 600;
       letter-spacing: 0.5px;
