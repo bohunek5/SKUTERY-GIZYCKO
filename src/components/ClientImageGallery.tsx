@@ -104,6 +104,17 @@ export default function ClientImageGallery({ images, name }: ClientImageGalleryP
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
                 transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset }) => {
+                  const swipe = offset.x;
+                  if (swipe < -50) {
+                    setSelectedIndex(prev => (prev !== null && prev < images.length - 1 ? prev + 1 : 0));
+                  } else if (swipe > 50) {
+                    setSelectedIndex(prev => (prev !== null && prev > 0 ? prev - 1 : images.length - 1));
+                  }
+                }}
               />
               <div className={styles.imgCounter}>
                 {selectedIndex + 1} / {images.length}

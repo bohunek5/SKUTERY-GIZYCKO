@@ -122,6 +122,17 @@ export default function ScooterSlider({ images }: ScooterSliderProps) {
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
               style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain' }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset }) => {
+                const swipe = offset.x;
+                if (swipe < -50) {
+                  setCurrentIndex(prev => (prev + 1) % images.length);
+                } else if (swipe > 50) {
+                  setCurrentIndex(prev => (prev - 1 + images.length) % images.length);
+                }
+              }}
             />
 
             <button 

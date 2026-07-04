@@ -178,12 +178,24 @@
   }
 
   @media (max-width: 992px) {
-    display: none; /* Hide arrows on mobile lightbox, user can swipe/tap */
+    width: 40px;
+    height: 40px;
+    
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
-.prevBtn { left: 40px; }
-.nextBtn { right: 40px; }
+.prevBtn { 
+  left: 40px; 
+  @media (max-width: 992px) { left: 10px; }
+}
+.nextBtn { 
+  right: 40px; 
+  @media (max-width: 992px) { right: 10px; }
+}
 
 .lightboxImgContainer {
   position: relative;
