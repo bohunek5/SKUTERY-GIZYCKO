@@ -9,35 +9,42 @@ export default function BackgroundAudio() {
   const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
+    // Only initialize once
+    if (audioRef.current) return;
+    
     // We use the basePath /SKUTERY-GIZYCKO as configured in next.config.ts
     const audio = new Audio("/SKUTERY-GIZYCKO/bg-music.mp3");
     audio.loop = true;
     audio.volume = 0.3;
     audioRef.current = audio;
 
+    let interacted = false;
+
     const playAudio = () => {
-      if (audioRef.current && !hasInteracted) {
+      if (audioRef.current && !interacted) {
+        interacted = true;
         audioRef.current.play().then(() => {
           setIsPlaying(true);
-          setHasInteracted(true);
-        }).catch((e) => console.log("Audio play blocked by browser:", e));
+        }).catch((e) => {
+          console.log("Audio play blocked by browser:", e);
+          interacted = false; // Reset if failed so next click works
+        });
       }
     };
 
     // Browsers require interaction to play audio
-    document.addEventListener("click", playAudio, { once: true });
-    document.addEventListener("touchstart", playAudio, { once: true });
-    document.addEventListener("keydown", playAudio, { once: true });
+    document.addEventListener("click", playAudio);
+    document.addEventListener("touchstart", playAudio);
+    document.addEventListener("keydown", playAudio);
 
     return () => {
       document.removeEventListener("click", playAudio);
       document.removeEventListener("touchstart", playAudio);
       document.removeEventListener("keydown", playAudio);
-      if (audioRef.current) {
-        audioRef.current.pause();
-      }
+      // We don't pause the audio on cleanup because layout doesn't unmount
+      // If we did, HMR or navigating might stop the music.
     };
-  }, [hasInteracted]);
+  }, []);
 
   const togglePlay = () => {
     if (audioRef.current) {
