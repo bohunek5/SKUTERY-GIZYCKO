@@ -7,6 +7,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import BackgroundAudio from '@/components/BackgroundAudio';
 import {Metadata} from 'next';
 import { Inter } from 'next/font/google';
 const inter = Inter({
@@ -61,6 +62,7 @@ export default async function LocaleLayout({
             {children}
             <Footer />
             <ScrollToTop />
+            <BackgroundAudio />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
